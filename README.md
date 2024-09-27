@@ -3,6 +3,8 @@
 ## What does this repository do?
 This repository serves as a demo/boilerplate for a fully customizable web client for use with Strapi.
 
+This is the web client companion to [biz-backend-demo](https://github.com/chenh1/biz-backend-demo). 
+
 ## Features
 
 ### Component Library
@@ -38,3 +40,5 @@ Generates static pages where available or sensible. Otherwise, everything is SSR
 ## Upcoming
 - Incorporate monitoring with newrelic, etc
 - Better tests and a bunch of refactoring...
+- Migrate from Cypress to Playwright
+
