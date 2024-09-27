@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders RecommendedPosts module 1`] = `
+<div>
+  <div
+    class=" grid  gap-8  p-2 "
+  >
+    <div
+      class=" grid  gap-4  p-2 sm:justify-self-center"
+    >
+      <span
+        data-href="/posts"
+        data-testid="buttonLink"
+      >
+        <div
+          class="bg-hyper-red border-hyper-red dark:bg-hyper-red dark:border-hyper-red rounded-lg absolute left-0 top-0 w-full h-full "
+        />
+        <span
+          class="pointer-events-none relative z-10"
+        >
+          See all posts
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders RecommendedPosts module 2`] = `
+<div>
+  <div
+    class=" grid  gap-8  p-2 "
+  >
+    <div
+      class=" grid  gap-4  p-2 sm:justify-self-center"
+    >
+      <span
+        data-href="/posts"
+        data-testid="buttonLink"
+      >
+        <div
+          class="bg-hyper-red border-hyper-red dark:bg-hyper-red dark:border-hyper-red rounded-lg absolute left-0 top-0 w-full h-full "
+        />
+        <span
+          class="pointer-events-none relative z-10"
+        >
+          See all posts
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;

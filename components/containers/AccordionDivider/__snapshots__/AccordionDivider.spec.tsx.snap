@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders opened accordion divider once label is clicked 1`] = `
+<DocumentFragment>
+  <div
+    class=" grid  gap-4  p-2 "
+  >
+    <div
+      class="cursor-pointer flex justify-between md:justify-start"
+      data-testid="accordionLabelClick"
+    >
+      <h3>
+        Label
+      </h3>
+      <div
+        class="relative w-5 ml-4"
+      >
+        <div
+          class="triangle accordion up"
+        >
+          <div />
+        </div>
+      </div>
+    </div>
+    <hr
+      class="w-full h-0 border-0 border-t-[1px] border-night-black-300 dark:border-max-white "
+    />
+    <div
+      class="relative overflow-hidden duration-300 ease-in-out h-full"
+    >
+      <div
+        class=" grid  gap-4  p-2 duration-300 ease-in-out translate-y-0"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`renders the accordion divider 1`] = `
+<DocumentFragment>
+  <div
+    class=" grid  gap-4  p-2 "
+  >
+    <div
+      class="cursor-pointer flex justify-between md:justify-start"
+      data-testid="accordionLabelClick"
+    >
+      <h3>
+        Label
+      </h3>
+      <div
+        class="relative w-5 ml-4"
+      >
+        <div
+          class="triangle accordion down"
+        >
+          <div />
+        </div>
+      </div>
+    </div>
+    <hr
+      class="w-full h-0 border-0 border-t-[1px] border-night-black-300 dark:border-max-white "
+    />
+    <div
+      class="relative overflow-hidden duration-300 ease-in-out h-0"
+    >
+      <div
+        class=" grid  gap-4  p-2 duration-300 ease-in-out -translate-y-full"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

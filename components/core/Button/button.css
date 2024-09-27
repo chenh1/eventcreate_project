@@ -1,0 +1,79 @@
+.triangle { 
+  position: absolute;
+  width: 20px;
+  top: 50%;
+  display: none;
+}
+
+.secondary:hover .triangle {
+  display: block;
+}
+
+.triangle.static {
+  display: block;
+}
+/* 
+@media (min-width: 768px) {
+  .show-triangle .triangle {
+    display: block;
+  }
+
+  .hide-triangle .triangle {
+    display: none;
+  }
+} */
+
+.triangle.left {
+  left: 0;
+  transform: translateX(-200%) rotate(90deg);
+}
+
+.triangle.right {
+  right: 0;
+  transform: translateX(200%) rotate(-90deg);
+}
+
+.triangle>div { 
+  width: 20px;
+  height: 2px;
+  background: #050E1C;
+}
+
+.dark .triangle>div {
+  background: #F3F4F6;
+}
+
+.triangle>div:before {
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #050E1C;
+  -webkit-transform: rotate(56deg);
+  -moz-transform: rotate(56deg);
+  -ms-transform: rotate(56deg);
+  transform: rotate(56deg);
+  position: absolute;
+  top: -8px;
+  right: -5px;
+}
+.dark .triangle>div:before {
+  background: #F3F4F6;
+}
+.triangle>div:after {
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #050E1C;
+  -webkit-transform: rotate(-56deg);
+  -moz-transform: rotate(-56deg);
+  -ms-transform: rotate(-56deg);
+  transform: rotate(-56deg);
+  position: absolute;
+  top: -8px;
+  left: -5px;
+}
+.dark .triangle>div:after {
+  background: #F3F4F6;
+}

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`slides with a parallax effect 1`] = `
+<DocumentFragment>
+  <div
+    class="duration-300 "
+  >
+    <p>
+      Parallax
+    </p>
+  </div>
+</DocumentFragment>
+`;

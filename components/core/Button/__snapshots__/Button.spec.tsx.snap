@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`animates button on hover and reverts back after leave 1`] = `
+<DocumentFragment>
+  <button
+    class=" secondary  w-full sm:w-auto cursor-pointer border-2 font-bold leading-none inline-block rounded-lg text-center font-headings relative text-slate-700 bg-transparent border-slate-700 dark:text-max-white dark:border-max-white active:text-max-white active:bg-slate-700 active:border-slate-700 dark:active:bg-max-white dark:active:border-max-white dark:active:text-night-black px-5 py-2.5   "
+    data-testid="button"
+    type="button"
+  >
+    <div
+      class="triangle left"
+    >
+      <div />
+    </div>
+    <div
+      class="triangle right"
+    >
+      <div />
+    </div>
+    <span
+      class="pointer-events-none relative z-10"
+    >
+      Click Me
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`animates button on hover and reverts back after leave 2`] = `
+<DocumentFragment>
+  <button
+    class=" secondary  w-full sm:w-auto cursor-pointer border-2 font-bold leading-none inline-block rounded-lg text-center font-headings relative text-slate-700 bg-transparent border-slate-700 dark:text-max-white dark:border-max-white active:text-max-white active:bg-slate-700 active:border-slate-700 dark:active:bg-max-white dark:active:border-max-white dark:active:text-night-black px-5 py-2.5   "
+    data-testid="button"
+    type="button"
+  >
+    <div
+      class="triangle left"
+    >
+      <div />
+    </div>
+    <div
+      class="triangle right"
+    >
+      <div />
+    </div>
+    <span
+      class="pointer-events-none relative z-10"
+    >
+      Click Me
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`renders a button 1`] = `
+<DocumentFragment>
+  <button
+    class=" secondary  w-full sm:w-auto cursor-pointer border-2 font-bold leading-none inline-block rounded-lg text-center font-headings relative text-slate-700 bg-transparent border-slate-700 dark:text-max-white dark:border-max-white active:text-max-white active:bg-slate-700 active:border-slate-700 dark:active:bg-max-white dark:active:border-max-white dark:active:text-night-black px-5 py-2.5   "
+    data-testid="button"
+    type="button"
+  >
+    <div
+      class="triangle left"
+    >
+      <div />
+    </div>
+    <div
+      class="triangle right"
+    >
+      <div />
+    </div>
+    <span
+      class="pointer-events-none relative z-10"
+    >
+      Click Me
+    </span>
+  </button>
+</DocumentFragment>
+`;

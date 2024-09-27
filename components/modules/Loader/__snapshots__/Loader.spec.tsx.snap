@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Loader module 1`] = `
+<DocumentFragment>
+  <div
+    class=" grid  gap-4  p-2 slow-spin justify-center"
+  >
+    <img
+      alt="Logo icon"
+      height="256"
+      src="https://biz-web-client-demo-static.s3.us-east-2.amazonaws.com/biz-web-client-demobloommono_ba249abb01.png"
+      width="256"
+    />
+  </div>
+</DocumentFragment>
+`;

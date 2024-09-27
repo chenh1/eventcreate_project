@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a generic maintenance module 1`] = `
+<div>
+  <div
+    class=" flex border-box justify-around w-full h-screen dark bg-night-black"
+  >
+    <div
+      class="w-full max-w-7xl px-4 xl:px-0"
+    >
+      <div
+        class=" grid  gap-4  p-2 h-screen relative items-center"
+      >
+        <div
+          class=" grid  gap-8  p-2 place-content-center"
+        >
+          <h1
+            class="text-night-black dark:text-max-white font-headings font-semibold text-4xl sm:text-6xl text-center"
+          >
+            Tending to the flowers right now.
+          </h1>
+          <h1
+            class="text-night-black dark:text-max-white font-headings font-semibold text-4xl sm:text-6xl text-center"
+          >
+            We'll be back shortly!
+          </h1>
+          <h4
+            class="text-night-black dark:text-max-white font-headings font-semibold text-lg sm:text-md text-center"
+          >
+            Thanks for your patience while we're under maintenance. See you soon!
+          </h4>
+          <div
+            class=" grid  gap-4  p-2 slow-spin justify-center"
+          >
+            <img
+              alt="Logo icon"
+              height="256"
+              src="https://biz-web-client-demo-static.s3.us-east-2.amazonaws.com/biz-web-client-demobloommono_ba249abb01.png"
+              width="256"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders a maintenance module in no data state 1`] = `
+<div>
+  <h4
+    class="text-night-black dark:text-max-white font-headings font-semibold text-lg sm:text-md text-center"
+  >
+    We're getting this page up for you right now. Sit tight and thanks for your patience!
+  </h4>
+</div>
+`;
+
+exports[`renders a maintenance module in offline state 1`] = `
+<div>
+  <div
+    class=" flex border-box justify-around w-full h-screen dark bg-night-black"
+  >
+    <div
+      class="w-full max-w-7xl px-4 xl:px-0"
+    >
+      <div
+        class=" grid  gap-4  p-2 h-screen relative items-center"
+      >
+        <div
+          class=" grid  gap-8  p-2 place-content-center"
+        >
+          <h1
+            class="text-night-black dark:text-max-white font-headings font-semibold text-4xl sm:text-6xl text-center"
+          >
+            Tending to the flowers right now.
+          </h1>
+          <h1
+            class="text-night-black dark:text-max-white font-headings font-semibold text-4xl sm:text-6xl text-center"
+          >
+            We'll be back shortly!
+          </h1>
+          <h4
+            class="text-night-black dark:text-max-white font-headings font-semibold text-lg sm:text-md text-center"
+          >
+            Thanks for your patience while we're under maintenance. See you soon!
+          </h4>
+          <div
+            class=" grid  gap-4  p-2 slow-spin justify-center"
+          >
+            <img
+              alt="Logo icon"
+              height="256"
+              src="https://biz-web-client-demo-static.s3.us-east-2.amazonaws.com/biz-web-client-demobloommono_ba249abb01.png"
+              width="256"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders the child component since not in maintenance 1`] = `
+<div>
+  <p>
+    Sucessfully loaded
+  </p>
+</div>
+`;

@@ -1,0 +1,351 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders multiple series of lessons in a vertical node format 1`] = `
+<div>
+  <div
+    class=" flex border-box justify-around w-full py-24 "
+  >
+    <div
+      class="w-full max-w-7xl px-4 xl:px-0"
+    >
+      <div
+        class=" grid  gap-12  p-2 sm:grid-cols-3"
+      >
+        <div
+          class=" grid  gap-4  p-2 relative col-span-1 self-center"
+        >
+          <div
+            class="absolute opacity-25 left-0 h-36 w-36 grid place-items-center rounded-full bg-hyper-red"
+          >
+            <h4
+              class="text-night-black dark:text-max-white font-headings font-semibold text-8xl "
+            >
+              1
+            </h4>
+          </div>
+          <div
+            class=" grid  gap-4  p-2 z-10"
+          >
+            <h3
+              class="text-night-black dark:text-max-white font-headings font-semibold text-2xl sm:text-4xl "
+            >
+              Intro to cooking
+            </h3>
+            <p
+              class=" text-night-black dark:text-max-white font-body font-body text-base undefined"
+            >
+              Learn the basics of cooking
+            </p>
+          </div>
+        </div>
+        <div
+          style="min-height: NaNpx;"
+        >
+          <div
+            class=" grid  gap-4  p-2 overflow-y-auto col-span-1 w-full h-full"
+          >
+            <svg
+              height="100"
+              width="100"
+            >
+              <defs>
+                <lineargradient
+                  id="lg"
+                  x1="0"
+                  x2="0"
+                  y1="0"
+                  y2="1"
+                >
+                  <stop
+                    offset="0%"
+                    stop-color="#fd9b93"
+                    stop-opacity="1"
+                  />
+                  <stop
+                    offset="100%"
+                    stop-color="#fe6e9e"
+                    stop-opacity="1"
+                  />
+                </lineargradient>
+              </defs>
+              <rect
+                fill="#050E1C"
+                height="100"
+                rx="14"
+                width="100"
+              />
+              <g
+                class="visx-group"
+                transform="translate(80, 80)"
+              >
+                <g
+                  class="visx-group cursor-pointer relative"
+                  transform="translate(-30, 0)"
+                >
+                  <circle
+                    data-cy="-node-0"
+                    fill="#050E1C"
+                    height="56"
+                    r="28"
+                    stroke="#FF2F97"
+                    stroke-width="1"
+                    width="56"
+                    x="-28"
+                    y="-28"
+                  />
+                  <text
+                    class=""
+                    data-cy="-node-text-0"
+                    dx="0"
+                    dy=".33em"
+                    fill="#ffffff"
+                    font-family=""Space Grotesk", sans-serif"
+                    font-size="18"
+                    style="pointer-events: none;"
+                    text-anchor="middle"
+                  >
+                    Lesson 2
+                  </text>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class=" grid  gap-4  p-2 self-center"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class=" flex border-box justify-around w-full py-24 "
+  >
+    <div
+      class="w-full max-w-7xl px-4 xl:px-0"
+    >
+      <div
+        class=" grid  gap-12  p-2 sm:grid-cols-3"
+      >
+        <div
+          class=" grid  gap-4  p-2 relative col-span-1 self-center"
+        >
+          <div
+            class="absolute opacity-25 left-0 h-36 w-36 grid place-items-center rounded-full bg-force-yellow"
+          >
+            <h4
+              class="text-night-black dark:text-max-white font-headings font-semibold text-8xl "
+            >
+              2
+            </h4>
+          </div>
+          <div
+            class=" grid  gap-4  p-2 z-10"
+          >
+            <h3
+              class="text-night-black dark:text-max-white font-headings font-semibold text-2xl sm:text-4xl "
+            >
+              Intermediate cooking
+            </h3>
+            <p
+              class=" text-night-black dark:text-max-white font-body font-body text-base undefined"
+            >
+              Take the next steps
+            </p>
+          </div>
+        </div>
+        <div
+          style="min-height: NaNpx;"
+        >
+          <div
+            class=" grid  gap-4  p-2 overflow-y-auto col-span-1 w-full h-full"
+          >
+            <svg
+              height="100"
+              width="100"
+            >
+              <defs>
+                <lineargradient
+                  id="lg"
+                  x1="0"
+                  x2="0"
+                  y1="0"
+                  y2="1"
+                >
+                  <stop
+                    offset="0%"
+                    stop-color="#fd9b93"
+                    stop-opacity="1"
+                  />
+                  <stop
+                    offset="100%"
+                    stop-color="#fe6e9e"
+                    stop-opacity="1"
+                  />
+                </lineargradient>
+              </defs>
+              <rect
+                fill="#050E1C"
+                height="100"
+                rx="14"
+                width="100"
+              />
+              <g
+                class="visx-group"
+                transform="translate(80, 80)"
+              >
+                <g
+                  class="visx-group cursor-pointer relative"
+                  transform="translate(-30, 0)"
+                >
+                  <circle
+                    data-cy="-node-0"
+                    fill="#050E1C"
+                    height="56"
+                    r="28"
+                    stroke="#FDD701"
+                    stroke-width="1"
+                    width="56"
+                    x="-28"
+                    y="-28"
+                  />
+                  <text
+                    class=""
+                    data-cy="-node-text-0"
+                    dx="0"
+                    dy=".33em"
+                    fill="#ffffff"
+                    font-family=""Space Grotesk", sans-serif"
+                    font-size="18"
+                    style="pointer-events: none;"
+                    text-anchor="middle"
+                  >
+                    Lesson 2
+                  </text>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class=" grid  gap-4  p-2 self-center"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class=" flex border-box justify-around w-full py-24 "
+  >
+    <div
+      class="w-full max-w-7xl px-4 xl:px-0"
+    >
+      <div
+        class=" grid  gap-12  p-2 sm:grid-cols-3"
+      >
+        <div
+          class=" grid  gap-4  p-2 relative col-span-1 self-center"
+        >
+          <div
+            class="absolute opacity-25 left-0 h-36 w-36 grid place-items-center rounded-full bg-ultra-purple"
+          >
+            <h4
+              class="text-night-black dark:text-max-white font-headings font-semibold text-8xl "
+            >
+              3
+            </h4>
+          </div>
+          <div
+            class=" grid  gap-4  p-2 z-10"
+          >
+            <h3
+              class="text-night-black dark:text-max-white font-headings font-semibold text-2xl sm:text-4xl "
+            >
+              Master chef
+            </h3>
+            <p
+              class=" text-night-black dark:text-max-white font-body font-body text-base undefined"
+            >
+              Gain master in cooking
+            </p>
+          </div>
+        </div>
+        <div
+          style="min-height: NaNpx;"
+        >
+          <div
+            class=" grid  gap-4  p-2 overflow-y-auto col-span-1 w-full h-full"
+          >
+            <svg
+              height="100"
+              width="100"
+            >
+              <defs>
+                <lineargradient
+                  id="lg"
+                  x1="0"
+                  x2="0"
+                  y1="0"
+                  y2="1"
+                >
+                  <stop
+                    offset="0%"
+                    stop-color="#fd9b93"
+                    stop-opacity="1"
+                  />
+                  <stop
+                    offset="100%"
+                    stop-color="#fe6e9e"
+                    stop-opacity="1"
+                  />
+                </lineargradient>
+              </defs>
+              <rect
+                fill="#050E1C"
+                height="100"
+                rx="14"
+                width="100"
+              />
+              <g
+                class="visx-group"
+                transform="translate(80, 80)"
+              >
+                <g
+                  class="visx-group cursor-pointer relative"
+                  transform="translate(-30, 0)"
+                >
+                  <circle
+                    data-cy="-node-0"
+                    fill="#050E1C"
+                    height="56"
+                    r="28"
+                    stroke="#FF31F3"
+                    stroke-width="1"
+                    width="56"
+                    x="-28"
+                    y="-28"
+                  />
+                  <text
+                    class=""
+                    data-cy="-node-text-0"
+                    dx="0"
+                    dy=".33em"
+                    fill="#ffffff"
+                    font-family=""Space Grotesk", sans-serif"
+                    font-size="18"
+                    style="pointer-events: none;"
+                    text-anchor="middle"
+                  >
+                    Lesson 2
+                  </text>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class=" grid  gap-4  p-2 self-center"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

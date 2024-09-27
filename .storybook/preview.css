@@ -1,0 +1,9 @@
+html {
+  transition: .5s;
+  height: 100vh;
+  width: 100vw;
+}
+
+html.dark {
+  background-color: #050E1C;
+}

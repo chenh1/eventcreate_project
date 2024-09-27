@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a badge 1`] = `
+<DocumentFragment>
+  <div
+    class="relative popup freeze "
+  >
+    <div
+      class="award platinum"
+    >
+      <div
+        class="ribbon-star"
+      />
+      <div
+        class="ribbon"
+      />
+      <div
+        class="nested"
+      >
+        <div
+          class="ribbon-star grid place-items-center"
+        />
+      </div>
+      <div
+        class="nested-2"
+      >
+        <div
+          class="ribbon-star grid place-items-center"
+        >
+          <div
+            class="absolute z-50"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

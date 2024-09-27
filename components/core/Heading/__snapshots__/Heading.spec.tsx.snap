@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders an h1 tag 1`] = `
+<DocumentFragment>
+  <h1
+    class="text-night-black dark:text-max-white font-headings font-semibold text-4xl sm:text-6xl "
+  />
+</DocumentFragment>
+`;
+
+exports[`renders an h1 with fontSizeClass overriding base h1 styles 1`] = `
+<DocumentFragment>
+  <h1
+    class="text-night-black dark:text-max-white font-headings font-semibold some-class "
+  />
+</DocumentFragment>
+`;

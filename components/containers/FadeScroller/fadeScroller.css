@@ -1,0 +1,8 @@
+.fade-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.fade-scroller {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

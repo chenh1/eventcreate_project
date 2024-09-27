@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a box wrapper 1`] = `
+<DocumentFragment>
+  <div
+    class=" grid rounded-md gap-8 shadow-lg p-12 "
+  />
+</DocumentFragment>
+`;

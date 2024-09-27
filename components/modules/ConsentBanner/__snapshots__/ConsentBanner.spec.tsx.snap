@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`displays the consent banner if unauthenticated and consent not given 1`] = `
+<DocumentFragment>
+  <div
+    class=" flex border-box justify-around w-full py-12 fixed bottom-0  w-screen bg-max-white z-50"
+  >
+    <div
+      class="w-full max-w-7xl px-4 xl:px-0"
+    >
+      <div
+        class=" grid  gap-8  p-2 items-center sm:grid-cols-2"
+      >
+        <div
+          class=" grid  gap-4  p-2 "
+        >
+          <p
+            class=" text-night-black dark:text-max-white font-body font-body text-base undefined"
+          >
+            We use cookies to enhance your user experience. By using our website, you agree to our use of cookies.
+          </p>
+          <span
+            class="  relative cursor-pointer font-body text-night-black dark:text-max-white before:content-[""] before:absolute before:translate-y-[6px] before:bottom-0 before:duration-300 before:ease-in-out before:border-apex-blue before:w-0 before:border-2 before:opacity-0 hover:brightness-110 hover:before:w-full hover:before:opacity-100"
+          >
+            See our Privacy Policy
+          </span>
+        </div>
+        <div
+          class=" grid  gap-4  p-2 items-center"
+        >
+          <button
+            class="   w-full sm:w-auto cursor-pointer border-2 font-bold leading-none inline-block rounded-lg text-center font-headings relative text-max-white px-6 py-3   bg-hyper-red border-hyper-red dark:bg-hyper-red dark:border-hyper-red"
+            data-testid="button"
+            type="button"
+          >
+            <div
+              class="bg-hyper-red border-hyper-red dark:bg-hyper-red dark:border-hyper-red rounded-lg absolute left-0 top-0 w-full h-full "
+            />
+            <span
+              class="pointer-events-none relative z-10"
+            >
+              Accept
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`hides the consent banner if consent accepted 1`] = `<DocumentFragment />`;
+
+exports[`hides the consent banner if user is authenticated 1`] = `<DocumentFragment />`;

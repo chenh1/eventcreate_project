@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a paragraph tag with default size styling if size is not indicated 1`] = `
+<DocumentFragment>
+  <p
+    class=" text-night-black dark:text-max-white font-body font-body text-base undefined"
+  >
+    Some words go here
+  </p>
+</DocumentFragment>
+`;
+
+exports[`renders a paragraph tag with medium size styling 1`] = `
+<DocumentFragment>
+  <p
+    class=" text-night-black dark:text-max-white font-body font-body text-base undefined"
+  >
+    Some words go here
+  </p>
+</DocumentFragment>
+`;

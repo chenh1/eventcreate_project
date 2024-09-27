@@ -1,0 +1,233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a Table given the dataset 1`] = `
+<DocumentFragment>
+  <div
+    class="grid gap-8 "
+    style="grid-template-columns: repeat(4, minmax(0, 1fr));"
+  >
+    <div />
+    <div
+      cellindex="1"
+      class=" grid rounded-md gap-4 shadow-lg p-8 "
+      columnheaders="[object Object],[object Object],[object Object]"
+      numberofcellsincolumn="4"
+      numberofcellsinrow="3"
+      rowheaders="[object Object],[object Object],[object Object],[object Object]"
+      rowindex="0"
+    >
+      column1
+    </div>
+    <div
+      cellindex="2"
+      class=" grid rounded-md gap-4 shadow-lg p-8 "
+      columnheaders="[object Object],[object Object],[object Object]"
+      numberofcellsincolumn="4"
+      numberofcellsinrow="3"
+      rowheaders="[object Object],[object Object],[object Object],[object Object]"
+      rowindex="0"
+    >
+      column2
+    </div>
+    <div
+      cellindex="3"
+      class=" grid rounded-md gap-4 shadow-lg p-8 "
+      columnheaders="[object Object],[object Object],[object Object]"
+      numberofcellsincolumn="4"
+      numberofcellsinrow="3"
+      rowheaders="[object Object],[object Object],[object Object],[object Object]"
+      rowindex="0"
+    >
+      column3
+    </div>
+    <div
+      cellindex="0"
+      class=" grid rounded-md gap-4 shadow-lg p-8 "
+      columnheaders="[object Object],[object Object],[object Object]"
+      numberofcellsincolumn="4"
+      numberofcellsinrow="3"
+      rowheaders="[object Object],[object Object],[object Object],[object Object]"
+      rowindex="0"
+    >
+      row1
+    </div>
+    <div
+      cellindex="0"
+      class=" grid rounded-md gap-4 shadow-lg p-8 "
+      columnheaders="[object Object],[object Object],[object Object]"
+      numberofcellsincolumn="4"
+      numberofcellsinrow="3"
+      rowheaders="[object Object],[object Object],[object Object],[object Object]"
+      rowindex="0"
+      value="test00"
+    >
+      test00
+    </div>
+    <div
+      cellindex="1"
+      class=" grid rounded-md gap-4 shadow-lg p-8 "
+      columnheaders="[object Object],[object Object],[object Object]"
+      numberofcellsincolumn="4"
+      numberofcellsinrow="3"
+      rowheaders="[object Object],[object Object],[object Object],[object Object]"
+      rowindex="0"
+      value="test10"
+    >
+      test10
+    </div>
+    <div
+      cellindex="2"
+      class=" grid rounded-md gap-4 shadow-lg p-8 "
+      columnheaders="[object Object],[object Object],[object Object]"
+      numberofcellsincolumn="4"
+      numberofcellsinrow="3"
+      rowheaders="[object Object],[object Object],[object Object],[object Object]"
+      rowindex="0"
+      value="test20"
+    >
+      test20
+    </div>
+    <div
+      cellindex="0"
+      class=" grid rounded-md gap-4 shadow-lg p-8 "
+      columnheaders="[object Object],[object Object],[object Object]"
+      numberofcellsincolumn="4"
+      numberofcellsinrow="3"
+      rowheaders="[object Object],[object Object],[object Object],[object Object]"
+      rowindex="1"
+    >
+      row2
+    </div>
+    <div
+      cellindex="0"
+      class=" grid rounded-md gap-4 shadow-lg p-8 "
+      columnheaders="[object Object],[object Object],[object Object]"
+      numberofcellsincolumn="4"
+      numberofcellsinrow="3"
+      rowheaders="[object Object],[object Object],[object Object],[object Object]"
+      rowindex="1"
+      value="test01"
+    >
+      test01
+    </div>
+    <div
+      cellindex="1"
+      class=" grid rounded-md gap-4 shadow-lg p-8 "
+      columnheaders="[object Object],[object Object],[object Object]"
+      numberofcellsincolumn="4"
+      numberofcellsinrow="3"
+      rowheaders="[object Object],[object Object],[object Object],[object Object]"
+      rowindex="1"
+      value="test11"
+    >
+      test11
+    </div>
+    <div
+      cellindex="2"
+      class=" grid rounded-md gap-4 shadow-lg p-8 "
+      columnheaders="[object Object],[object Object],[object Object]"
+      numberofcellsincolumn="4"
+      numberofcellsinrow="3"
+      rowheaders="[object Object],[object Object],[object Object],[object Object]"
+      rowindex="1"
+      value="test21"
+    >
+      test21
+    </div>
+    <div
+      cellindex="0"
+      class=" grid rounded-md gap-4 shadow-lg p-8 "
+      columnheaders="[object Object],[object Object],[object Object]"
+      numberofcellsincolumn="4"
+      numberofcellsinrow="3"
+      rowheaders="[object Object],[object Object],[object Object],[object Object]"
+      rowindex="2"
+    >
+      row3
+    </div>
+    <div
+      cellindex="0"
+      class=" grid rounded-md gap-4 shadow-lg p-8 "
+      columnheaders="[object Object],[object Object],[object Object]"
+      numberofcellsincolumn="4"
+      numberofcellsinrow="3"
+      rowheaders="[object Object],[object Object],[object Object],[object Object]"
+      rowindex="2"
+      value="test02"
+    >
+      test02
+    </div>
+    <div
+      cellindex="1"
+      class=" grid rounded-md gap-4 shadow-lg p-8 "
+      columnheaders="[object Object],[object Object],[object Object]"
+      numberofcellsincolumn="4"
+      numberofcellsinrow="3"
+      rowheaders="[object Object],[object Object],[object Object],[object Object]"
+      rowindex="2"
+      value="test12"
+    >
+      test12
+    </div>
+    <div
+      cellindex="2"
+      class=" grid rounded-md gap-4 shadow-lg p-8 "
+      columnheaders="[object Object],[object Object],[object Object]"
+      numberofcellsincolumn="4"
+      numberofcellsinrow="3"
+      rowheaders="[object Object],[object Object],[object Object],[object Object]"
+      rowindex="2"
+      value="test22"
+    >
+      test22
+    </div>
+    <div
+      cellindex="0"
+      class=" grid rounded-md gap-4 shadow-lg p-8 "
+      columnheaders="[object Object],[object Object],[object Object]"
+      numberofcellsincolumn="4"
+      numberofcellsinrow="3"
+      rowheaders="[object Object],[object Object],[object Object],[object Object]"
+      rowindex="3"
+    >
+      row4
+    </div>
+    <div
+      cellindex="0"
+      class=" grid rounded-md gap-4 shadow-lg p-8 "
+      columnheaders="[object Object],[object Object],[object Object]"
+      numberofcellsincolumn="4"
+      numberofcellsinrow="3"
+      rowheaders="[object Object],[object Object],[object Object],[object Object]"
+      rowindex="3"
+      value="test03"
+    >
+      test03
+    </div>
+    <div
+      cellindex="1"
+      class=" grid rounded-md gap-4 shadow-lg p-8 "
+      columnheaders="[object Object],[object Object],[object Object]"
+      numberofcellsincolumn="4"
+      numberofcellsinrow="3"
+      rowheaders="[object Object],[object Object],[object Object],[object Object]"
+      rowindex="3"
+      value="test13"
+    >
+      test13
+    </div>
+    <div
+      cellindex="2"
+      class=" grid rounded-md gap-4 shadow-lg p-8 "
+      columnheaders="[object Object],[object Object],[object Object]"
+      numberofcellsincolumn="4"
+      numberofcellsinrow="3"
+      rowheaders="[object Object],[object Object],[object Object],[object Object]"
+      rowindex="3"
+      value="test23"
+    >
+      test23
+    </div>
+  </div>
+</DocumentFragment>
+`;

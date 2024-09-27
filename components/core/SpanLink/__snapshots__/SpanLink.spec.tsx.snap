@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a black span text link 1`] = `
+<DocumentFragment>
+  <span
+    class="  relative cursor-pointer font-body text-night-black dark:text-max-white before:content-[""] before:absolute before:translate-y-[6px] before:bottom-0 before:duration-300 before:ease-in-out before:border-apex-blue before:w-0 before:border-2 before:opacity-0 hover:brightness-110 hover:before:w-full hover:before:opacity-100"
+  >
+    Click here to go somewhere
+  </span>
+</DocumentFragment>
+`;
+
+exports[`renders a traditional blue text link 1`] = `
+<DocumentFragment>
+  <span
+    class="  relative cursor-pointer font-body text-apex-blue before:content-[""] before:absolute before:translate-y-[6px] before:bottom-0 before:duration-300 before:ease-in-out before:border-apex-blue before:w-0 before:border-2 before:opacity-0 hover:brightness-110 hover:before:w-full hover:before:opacity-100"
+  >
+    Click here to go somewhere
+  </span>
+</DocumentFragment>
+`;

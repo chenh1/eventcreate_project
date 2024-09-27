@@ -1,0 +1,531 @@
+.victory-scene {
+  position: relative;
+  height: 48.376vmin;
+  width: 24.5vmin;
+  #-webkit-mask-image: linear-gradient(to bottom, transparent 12%, black);
+  z-index: 10;
+}
+
+.circle {
+  background: rgb(188, 188, 188);
+  height: 9vmin;
+  width: 9vmin;
+  border-radius: 50%;
+  transform: scale(0);
+  position: absolute;
+}
+
+@keyframes circle-blip {
+  0% {
+    transform: scale(0);  
+  }
+  70% {
+    transform: scale(1.2);  
+  }
+  85% {
+    transform: scale(.95);  
+  }
+  100% {
+    transform: scale(1);  
+  }
+}
+
+@keyframes circle-blip-nested {
+  0% {
+    transform: scale(0);  
+  }
+  70% {
+    transform: scale(1.2);  
+  }
+  85% {
+    transform: scale(.95);  
+  }
+  100% {
+    transform: scale(.96);
+  }
+}
+
+@keyframes circle-blip-inner {
+  0% {
+    transform: scale(0);  
+  }
+  70% {
+    transform: scale(1.2);  
+  }
+  85% {
+    transform: scale(.95);  
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.circle-animated {
+  animation: .3s linear 0s forwards circle-blip;
+}
+
+.circle-nested-animated {
+  background: #FF31F3;
+  animation: .75s linear .2s forwards circle-blip-nested;
+  transform: scale(.96);
+}
+
+.circle-inner-animated {
+  animation: .75s linear .5s forwards circle-blip-inner;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.step-1 {
+  left: 1.5vmin;
+  top: .3vmin;
+}
+
+.step-2 {
+ left: 14.6vmin;
+ top: 12.9vmin;
+}
+
+.step-2 {
+  animation-delay: 1.2s;
+}
+
+.step-2 .circle-nested-animated {
+  animation-delay: 1.4s;
+}
+
+.step-2 .circle-inner-animated {
+  animation-delay: 1.7s;
+}
+
+.step-3 {
+  left: 5.6vmin;
+  top: 37.5vmin;
+ }
+ 
+ .step-3 {
+   animation-delay: 2.5s;
+ }
+
+.step-3 .circle-nested-animated {
+  animation-delay: 2.7s;
+}
+
+.step-3 .circle-inner-animated {
+  animation-delay: 3s;
+}
+
+@keyframes drawVerticalLine {
+  0% {
+    height: 0;
+    transform: scale(0);
+  }
+  100% {
+    height: 10vmin;
+    transform: scale(1);
+  }
+}
+
+@keyframes drawHorizontalLine {
+  0% {
+    width: 0;
+    transform: scale(0);
+  }
+  100% {
+    width: 10vmin;
+    transform: scale(1);
+  }
+}
+
+.line {
+  height: 0;
+  border: .8vmin solid #00eaff;
+  width: 0;
+  transform: scale(0);
+  position: absolute;
+  border-radius: 10px;
+}
+
+.vertical-line {
+  transform-origin: top center;
+  animation: .25s linear .75s forwards drawVerticalLine;
+}
+
+.horizontal-line {
+  left: 3.9vmin;
+  top: 120px;
+  transform-origin: left center;
+  animation: .25s linear 1s forwards drawHorizontalLine;
+}
+
+.vertical-line-1 {
+  left: 5.3vmin;
+  top: 8vmin;
+}
+
+.horizontal-line-1 {
+  left: 5.5vmin;
+  top: 16.8vmin;
+}
+
+.vertical-line-2 {
+  left: 18.3vmin;
+  top: 20vmin;
+  animation-delay: 1.8s;
+}
+
+@keyframes drawHorizontalLineReverse {
+  0% {
+    width: 0;
+    transform: scale(0) rotate(180deg);
+  }
+  100% {
+    width: 10vmin;
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+.horizontal-line-2 {
+  left: 19.4vmin;
+  top: 28.7vmin;
+  animation: .25s linear 1s forwards drawHorizontalLineReverse;
+  animation-delay: 2s;
+}
+
+.vertical-line-3 {
+  left: 9.3vmin;
+  top: 28.9vmin;
+  animation-delay: 2.2s;
+}
+
+@keyframes waterDropFormation {
+  0% {
+    transform: scale(.3) rotate(-45deg);
+    border-top-right-radius: 50%;
+  }
+  30% {
+    transform: scale(1) rotate(-45deg) translate(-25%, 25%);
+    border-top-right-radius: 20%;
+  }
+  35% {
+    border-top-right-radius: 0%;
+    transform: scale(1) rotate(-45deg) translate(-30%, 30%);
+  }
+  40% {
+    transform: scale(1) rotate(-45deg) translate(-40%, 40%);
+  }
+  45% {
+    transform: scale(1) rotate(-45deg) translate(-60%, 60%);
+  }
+  52.5% {
+    transform: scale(1) rotate(-45deg) translate(-100%, 100%);
+  }
+  60% {
+    transform: scale(1) rotate(-45deg) translate(-180%, 180%);
+    opacity: 1;
+  }
+  90% {
+    transform: scale(1) rotate(-45deg) translate(-500%, 500%);
+  }
+  100% {
+    transform: scale(1) rotate(-45deg) translate(-600%, 600%);
+    opacity: 0;
+  }
+}
+
+.water-drops {
+  position: absolute;
+  left: 8vmin;
+  top: 44vmin;
+  background-color: #00eaff;
+  border-radius: 50%;
+  border-top-right-radius: 0;
+  transform: rotate(-45deg) scale(0);
+  width: 4vmin;
+  height: 4vmin;
+  animation: 2s linear 4s infinite waterDropFormation;
+}
+
+.water-drops.two {
+  animation-delay: 4.75s;
+}
+
+.water-drops.three {
+  animation-delay: 5.5s;
+}
+
+@keyframes waterFill {
+  0%{
+    clip-path: polygon(
+      0% 100%,
+      100% 100%,
+      100% 100%,
+      0% 100%
+    )
+  }
+  10% {
+		clip-path: polygon(
+      0% 94%,
+      5% 95%,
+      10% 95%,
+      15% 96%,
+      20% 96%,
+      25% 95%,
+      30% 95%,
+      35% 93%,
+      45% 91%,
+      50% 89%,
+      55% 87%,
+      60% 87%,
+      65% 86%,
+      70% 86%,
+      75% 87%,
+      80% 87%,
+      85% 88%,
+      90% 90%,
+      95% 92%,
+      100% 94%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  20%{
+		clip-path: polygon(
+      0% 89%,
+      5% 86%,
+      10% 84%,
+      15% 82%,
+      20% 80%,
+      25% 79%,
+      30% 78%,
+      35% 77%,
+      45% 77%,
+      50% 76%,
+      55% 76%,
+      60% 77%,
+      65% 77%,
+      70% 78%,
+      75% 79%,
+      80% 80%,
+      85% 82%,
+      90% 84%,
+      95% 86%,
+      100% 89%,
+      100% 100%,
+      0% 100%
+    );
+	}
+  30% {
+		clip-path: polygon(
+      0% 74%,
+      5% 72%,
+      10% 70%,
+      15% 68%,
+      20% 67%,
+      25% 67%,
+      30% 66%,
+      35% 66%,
+      45% 67%,
+      50% 67%,
+      55% 69%,
+      60% 71%,
+      65% 73%,
+      70% 75%,
+      75% 75%,
+      80% 76%,
+      85% 76%,
+      90% 75%,
+      95% 75%,
+      100% 74%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  40%{
+		clip-path: polygon(
+      0% 69%,
+      5% 66%,
+      10% 64%,
+      15% 62%,
+      20% 60%,
+      25% 59%,
+      30% 58%,
+      35% 57%,
+      45% 57%,
+      50% 56%,
+      55% 56%,
+      60% 57%,
+      65% 57%,
+      70% 58%,
+      75% 59%,
+      80% 60%,
+      85% 62%,
+      90% 64%,
+      95% 66%,
+      100% 69%,
+      100% 100%,
+      0% 100%
+    );
+	}
+  50% {
+		clip-path: polygon(
+      0% 54%,
+      5% 55%,
+      10% 55%,
+      15% 56%,
+      20% 56%,
+      25% 55%,
+      30% 55%,
+      35% 53%,
+      45% 51%,
+      50% 49%,
+      55% 47%,
+      60% 47%,
+      65% 46%,
+      70% 46%,
+      75% 47%,
+      80% 47%,
+      85% 48%,
+      90% 50%,
+      95% 52%,
+      100% 54%,
+      100% 100%,
+      0% 100%
+    );
+  }
+	60%{
+		clip-path: polygon(
+      0% 49%,
+      5% 46%,
+      10% 44%,
+      15% 42%,
+      20% 40%,
+      25% 39%,
+      30% 38%,
+      35% 37%,
+      45% 37%,
+      50% 36%,
+      55% 36%,
+      60% 37%,
+      65% 37%,
+      70% 38%,
+      75% 39%,
+      80% 40%,
+      85% 42%,
+      90% 44%,
+      95% 46%,
+      100% 49%,
+      100% 100%,
+      0% 100%
+    );
+	}
+
+	70% {
+		clip-path: polygon(
+      0% 34%,
+      5% 32%,
+      10% 30%,
+      15% 28%,
+      20% 27%,
+      25% 27%,
+      30% 26%,
+      35% 26%,
+      45% 27%,
+      50% 27%,
+      55% 29%,
+      60% 31%,
+      65% 33%,
+      70% 35%,
+      75% 35%,
+      80% 36%,
+      85% 36%,
+      90% 35%,
+      95% 35%,
+      100% 34%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  80%{
+		clip-path: polygon(
+      0% 29%,
+      5% 26%,
+      10% 24%,
+      15% 22%,
+      20% 20%,
+      25% 19%,
+      30% 18%,
+      35% 17%,
+      45% 17%,
+      50% 16%,
+      55% 16%,
+      60% 17%,
+      65% 17%,
+      70% 18%,
+      75% 19%,
+      80% 20%,
+      85% 22%,
+      90% 24%,
+      95% 26%,
+      100% 29%,
+      100% 100%,
+      0% 100%
+    );
+	}
+  90% {
+		clip-path: polygon(
+      0% 4%,
+      5% 5%,
+      10% 5%,
+      15% 6%,
+      20% 6%,
+      25% 5%,
+      30% 5%,
+      35% 3%,
+      45% 1%,
+      50% 0%,
+      55% 0%,
+      60% 0%,
+      65% 0%,
+      70% 0%,
+      75% 0%,
+      80% 0%,
+      85% 0%,
+      90% 0%,
+      95% 2%,
+      100% 4%,
+      100% 100%,
+      0% 100%
+    );
+	}
+
+  100% {
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
+.water-fill {
+  transform: scale(1);
+  background: #00eaff;
+  animation: waterFill 2s linear forwards;
+}
+
+.circle-inner-animated .text-night-black {
+  -webkit-text-stroke: 2px white;
+  color: white;
+  animation: waterFill 2s linear forwards;
+}
+
+.step-2 .water-fill, .step-2 .text-night-black {
+  animation-delay: 1.7s
+}
+
+.step-3 .water-fill, .step-3 .text-night-black {
+  animation-delay: 3s
+}

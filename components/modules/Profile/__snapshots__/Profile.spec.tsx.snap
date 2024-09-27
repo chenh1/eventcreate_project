@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Profile module 1`] = `
+<div>
+  <div
+    class="flex flex-col items-center justify-center w-full h-full"
+  >
+    <div
+      class="cursor-pointer relative w-12 h-12"
+      data-testid="toggleProfile"
+    >
+      <div
+        class="absolute w-full h-full rounded-full bg-gradient-to-br from-blue-400 to-blue-600"
+      />
+    </div>
+    <div
+      class="z-[10000] duration-300 ease-in-out opacity-100 fixed grid place-items-center left-0 top-0 w-screen h-screen "
+      data-testid="overlayBg"
+    >
+      <div
+        class="relative  freeze "
+      >
+        <div
+          class=" grid rounded-md gap-4 shadow-lg p-8 bg-max-white dark:bg-night-black fixed top-24 right-4 bg-night-black-300 dark:bg-night-black-300 dark"
+        >
+          <p
+            class=" text-night-black dark:text-max-white font-body font-body text-base undefined"
+          >
+            Logged in as 
+          </p>
+          <button
+            class=" secondary  w-full sm:w-auto cursor-pointer border-2 font-bold leading-none inline-block rounded-lg text-center font-headings relative text-slate-700 bg-transparent border-slate-700 dark:text-max-white dark:border-max-white active:text-max-white active:bg-slate-700 active:border-slate-700 dark:active:bg-max-white dark:active:border-max-white dark:active:text-night-black px-5 py-2.5   "
+            data-testid="button"
+            type="button"
+          >
+            <div
+              class="triangle left"
+            >
+              <div />
+            </div>
+            <div
+              class="triangle right"
+            >
+              <div />
+            </div>
+            <span
+              class="pointer-events-none relative z-10"
+            >
+              Logout
+            </span>
+          </button>
+          <hr
+            class="w-full h-0 border-0 border-t-[1px] border-night-black-300 dark:border-max-white "
+          />
+          <div
+            class=" grid  gap-4  p-2 grid-cols-2"
+          >
+            <div>
+              <input
+                class="  h-0 w-0"
+                id="award_stats_0"
+                name="achievementView"
+                type="radio"
+                value="award_stats"
+              />
+              <label
+                class="  font-body relative flex my-[.6em] items-center text-night-black dark:text-max-white transition-colors duration-[250ms] ease-[cubic-bezier(.4,.0,.23,1)]"
+                for="award_stats_0"
+              >
+                <span
+                  class="pointer-events-none flex rounded-full justify-center items-center mr-[.9em] w-[1.1em] h-[1.1em] bg-transparent border-2 border-solid cursor-pointer transition-all duration-[250ms] ease-[cubic-bezier(.4,.0,.23,1)] before:content-[""] before:duration-300 before:origin-[0% 100%] before:w-[8px] before:h-[8px] before:absolute before:top-[0.49em] before:left-[0.3em] before:bg-night-black before:rounded-full before:scale-0 before:delay-300 border-night-black dark:border-max-white"
+                />
+                <span
+                  class="pointer-events-none duration-500 opacity-1"
+                >
+                  Show award stats
+                </span>
+                <ins
+                  class="pointer-events-none absolute block bottom-0 left-[2em] h-0 w-full overflow-hidden no-underline transition-[height] duration-300 ease-[cubic-bezier(.4,.0,.23,1)] "
+                >
+                  <i
+                    class="pointer-events-none absolute bottom-0 not-italic text-hyper-red"
+                  >
+                    Show award stats
+                  </i>
+                </ins>
+              </label>
+            </div>
+            <div>
+              <input
+                class="  h-0 w-0"
+                id="modules_completed_1"
+                name="achievementView"
+                type="radio"
+                value="modules_completed"
+              />
+              <label
+                class="  font-body relative flex my-[.6em] items-center text-night-black dark:text-max-white transition-colors duration-[250ms] ease-[cubic-bezier(.4,.0,.23,1)]"
+                for="modules_completed_1"
+              >
+                <span
+                  class="pointer-events-none flex rounded-full justify-center items-center mr-[.9em] w-[1.1em] h-[1.1em] bg-transparent border-2 border-solid cursor-pointer transition-all duration-[250ms] ease-[cubic-bezier(.4,.0,.23,1)] before:content-[""] before:duration-300 before:origin-[0% 100%] before:w-[8px] before:h-[8px] before:absolute before:top-[0.49em] before:left-[0.3em] before:bg-night-black before:rounded-full before:scale-0 before:delay-300 border-[.55em] border-solid border-hyper-red animate-shrinkbounce before:scale-100"
+                />
+                <span
+                  class="pointer-events-none duration-500 opacity-0"
+                >
+                  Show completed modules
+                </span>
+                <ins
+                  class="pointer-events-none absolute block bottom-0 left-[2em] h-0 w-full overflow-hidden no-underline transition-[height] duration-300 ease-[cubic-bezier(.4,.0,.23,1)] h-full"
+                >
+                  <i
+                    class="pointer-events-none absolute bottom-0 not-italic text-hyper-red"
+                  >
+                    Show completed modules
+                  </i>
+                </ins>
+              </label>
+            </div>
+          </div>
+          <div
+            class="max-h-[50vh] overflow-y-auto"
+          >
+            <div
+              class=" grid  gap-4  p-2 justify-start"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

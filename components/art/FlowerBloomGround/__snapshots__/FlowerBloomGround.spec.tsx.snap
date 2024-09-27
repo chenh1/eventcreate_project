@@ -1,0 +1,303 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders all elements needed to animate flower 1`] = `
+<DocumentFragment>
+  <div
+    class="scene not-loaded"
+  >
+    <div
+      class="space-above-ground xl:justify-center"
+    >
+      <div
+        class="centering-scene relative"
+      >
+        <div
+          class="blade-shading grass-blade grass-blade-0 right-face"
+        />
+        <div
+          class="grass-blade grass-blade-0 right-face"
+        />
+        <div
+          class="blade-shading grass-blade slow grass-blade-1 left-face"
+        />
+        <div
+          class="grass-blade slow grass-blade-1 left-face"
+        />
+        <div
+          class="blade-shading grass-blade grass-blade-2 right-face"
+        />
+        <div
+          class="grass-blade grass-blade-2 right-face"
+        />
+        <div
+          class="blade-shading grass-blade fast grass-blade-3 left-face"
+        />
+        <div
+          class="grass-blade fast grass-blade-3 left-face"
+        />
+        <div
+          class="blade-shading grass-blade fast grass-blade-4 right-face"
+        />
+        <div
+          class="grass-blade fast grass-blade-4 right-face"
+        />
+        <div
+          class="blade-shading grass-blade slow grass-blade-5 left-face"
+        />
+        <div
+          class="grass-blade slow grass-blade-5 left-face"
+        />
+        <div
+          class="blade-shading grass-blade grass-blade-6 left-face"
+        />
+        <div
+          class="grass-blade grass-blade-6 left-face"
+        />
+        <div
+          class="blade-shading grass-blade slow grass-blade-7 right-face"
+        />
+        <div
+          class="grass-blade slow grass-blade-7 right-face"
+        />
+        <div
+          class="blade-shading grass-blade grass-blade-8 left-face"
+        />
+        <div
+          class="grass-blade grass-blade-8 left-face"
+        />
+        <div
+          class="blade-shading grass-blade fast grass-blade-9 right-face"
+        />
+        <div
+          class="grass-blade fast grass-blade-9 right-face"
+        />
+        <div
+          class="blade-shading grass-blade slow grass-blade-10 right-face"
+        />
+        <div
+          class="grass-blade slow grass-blade-10 right-face"
+        />
+        <div
+          class="blade-shading grass-blade grass-blade-11 left-face"
+        />
+        <div
+          class="grass-blade grass-blade-11 left-face"
+        />
+        <div
+          class="blade-shading grass-blade fast grass-blade-12 right-face"
+        />
+        <div
+          class="grass-blade fast grass-blade-12 right-face"
+        />
+        <div
+          class="blade-shading grass-blade grass-blade-13 left-face"
+        />
+        <div
+          class="grass-blade grass-blade-13 left-face"
+        />
+        <div
+          class="blade-shading grass-blade slow grass-blade-14 right-face"
+        />
+        <div
+          class="grass-blade slow grass-blade-14 right-face"
+        />
+        <div
+          class="blade-shading grass-blade grass-blade-15 left-face"
+        />
+        <div
+          class="grass-blade grass-blade-15 left-face"
+        />
+        <div
+          class="blade-shading grass-blade fast grass-blade-16 right-face"
+        />
+        <div
+          class="grass-blade fast grass-blade-16 right-face"
+        />
+        <div
+          class="blade-shading grass-blade grass-blade-17 left-face"
+        />
+        <div
+          class="grass-blade grass-blade-17 left-face"
+        />
+        <div
+          class="blade-shading grass-blade slow grass-blade-18 right-face"
+        />
+        <div
+          class="grass-blade slow grass-blade-18 right-face"
+        />
+        <div
+          class="blade-shading grass-blade grass-blade-19 left-face"
+        />
+        <div
+          class="grass-blade grass-blade-19 left-face"
+        />
+        <div
+          class="blade-shading grass-blade fast grass-blade-20 right-face"
+        />
+        <div
+          class="grass-blade fast grass-blade-20 right-face"
+        />
+        <div
+          class="flower"
+        >
+          <div
+            class="flower-glow "
+          />
+          <div
+            class="flower-glow "
+          />
+          <div
+            class="flower-leaf-wrapper"
+          >
+            <div
+              class="flower-leaf-stem stem-left"
+            />
+            <div
+              class="flower-leaf shading"
+            />
+            <div
+              class="flower-leaf"
+            />
+          </div>
+          <div
+            class="flower-leaf-wrapper leaf-wrapper-2"
+          >
+            <div
+              class="flower-leaf-stem stem-left"
+            />
+            <div
+              class="flower-leaf shading"
+            />
+            <div
+              class="flower-leaf"
+            />
+          </div>
+          <div
+            class="flower-stem"
+          />
+          <div
+            class="flower-stem-shading"
+          />
+          <div
+            class="flower-head"
+          >
+            <div
+              class=" "
+            >
+              <div
+                class="petal-wrapper wrapper-4"
+              >
+                <div
+                  class="flower-petal flower-petal-4"
+                />
+                <div
+                  class="flower-petal flower-petal-4 petal-shading"
+                />
+              </div>
+            </div>
+            <div
+              class=" "
+            >
+              <div
+                class="petal-wrapper wrapper-3"
+              >
+                <div
+                  class="flower-petal flower-petal-3"
+                />
+                <div
+                  class="flower-petal flower-petal-3 petal-shading"
+                />
+              </div>
+            </div>
+            <div
+              class="flower-center "
+            />
+            <div
+              class=" "
+            >
+              <div
+                class="petal-wrapper wrapper-2"
+              >
+                <div
+                  class="flower-petal flower-petal-2"
+                />
+                <div
+                  class="flower-petal flower-petal-2 petal-shading"
+                />
+              </div>
+            </div>
+            <div
+              class=" "
+            >
+              <div
+                class="petal-wrapper wrapper-1"
+              >
+                <div
+                  class="flower-petal flower-petal-1"
+                />
+                <div
+                  class="flower-petal flower-petal-1 petal-shading"
+                />
+              </div>
+            </div>
+            <div
+              class=" "
+            >
+              <div
+                class="petal-wrapper wrapper-0"
+              >
+                <div
+                  class="flower-petal flower-petal-0"
+                />
+                <div
+                  class="flower-petal flower-petal-0 petal-shading"
+                />
+              </div>
+            </div>
+            <div
+              class=""
+            >
+              <div
+                class="flower-head-base-wrapper flower-head-base-wrapper-0"
+              >
+                <div
+                  class="flower-head-base flower-head-base-0"
+                />
+                <div
+                  class="flower-head-base-detail flower-head-base-0-detail"
+                />
+              </div>
+              <div
+                class="flower-head-base-wrapper flower-head-base-wrapper-1"
+              >
+                <div
+                  class="flower-head-base flower-head-base-1"
+                />
+                <div
+                  class="flower-head-base-detail flower-head-base-1-detail"
+                />
+              </div>
+              <div
+                class="flower-head-base-wrapper flower-head-base-wrapper-2"
+              >
+                <div
+                  class="flower-head-base flower-head-base-2"
+                />
+                <div
+                  class="flower-head-base-detail flower-head-base-2-detail"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="ground-surface"
+      />
+    </div>
+    <div
+      class="ground"
+    />
+  </div>
+</DocumentFragment>
+`;

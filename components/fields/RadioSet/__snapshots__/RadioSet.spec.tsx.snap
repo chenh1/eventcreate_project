@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a radio set field 1`] = `
+<DocumentFragment>
+  <div>
+    <input
+      class="  h-0 w-0"
+      id="1_0"
+      name="radio-set"
+      type="radio"
+      value="1"
+    />
+    <label
+      class="  font-body relative flex my-[.6em] items-center text-night-black dark:text-max-white transition-colors duration-[250ms] ease-[cubic-bezier(.4,.0,.23,1)]"
+      for="1_0"
+    >
+      <span
+        class="pointer-events-none flex rounded-full justify-center items-center mr-[.9em] w-[1.1em] h-[1.1em] bg-transparent border-2 border-solid cursor-pointer transition-all duration-[250ms] ease-[cubic-bezier(.4,.0,.23,1)] before:content-[""] before:duration-300 before:origin-[0% 100%] before:w-[8px] before:h-[8px] before:absolute before:top-[0.49em] before:left-[0.3em] before:bg-night-black before:rounded-full before:scale-0 before:delay-300 border-night-black dark:border-max-white"
+      />
+      <span
+        class="pointer-events-none duration-500 opacity-1"
+      >
+        Option 1
+      </span>
+      <ins
+        class="pointer-events-none absolute block bottom-0 left-[2em] h-0 w-full overflow-hidden no-underline transition-[height] duration-300 ease-[cubic-bezier(.4,.0,.23,1)] "
+      >
+        <i
+          class="pointer-events-none absolute bottom-0 not-italic text-hyper-red"
+        >
+          Option 1
+        </i>
+      </ins>
+    </label>
+  </div>
+  <div>
+    <input
+      class="  h-0 w-0"
+      id="2_1"
+      name="radio-set"
+      type="radio"
+      value="2"
+    />
+    <label
+      class="  font-body relative flex my-[.6em] items-center text-night-black dark:text-max-white transition-colors duration-[250ms] ease-[cubic-bezier(.4,.0,.23,1)]"
+      for="2_1"
+    >
+      <span
+        class="pointer-events-none flex rounded-full justify-center items-center mr-[.9em] w-[1.1em] h-[1.1em] bg-transparent border-2 border-solid cursor-pointer transition-all duration-[250ms] ease-[cubic-bezier(.4,.0,.23,1)] before:content-[""] before:duration-300 before:origin-[0% 100%] before:w-[8px] before:h-[8px] before:absolute before:top-[0.49em] before:left-[0.3em] before:bg-night-black before:rounded-full before:scale-0 before:delay-300 border-night-black dark:border-max-white"
+      />
+      <span
+        class="pointer-events-none duration-500 opacity-1"
+      >
+        Option 2
+      </span>
+      <ins
+        class="pointer-events-none absolute block bottom-0 left-[2em] h-0 w-full overflow-hidden no-underline transition-[height] duration-300 ease-[cubic-bezier(.4,.0,.23,1)] "
+      >
+        <i
+          class="pointer-events-none absolute bottom-0 not-italic text-hyper-red"
+        >
+          Option 2
+        </i>
+      </ins>
+    </label>
+  </div>
+  <div>
+    <input
+      class="  h-0 w-0"
+      id="3_2"
+      name="radio-set"
+      type="radio"
+      value="3"
+    />
+    <label
+      class="  font-body relative flex my-[.6em] items-center text-night-black dark:text-max-white transition-colors duration-[250ms] ease-[cubic-bezier(.4,.0,.23,1)]"
+      for="3_2"
+    >
+      <span
+        class="pointer-events-none flex rounded-full justify-center items-center mr-[.9em] w-[1.1em] h-[1.1em] bg-transparent border-2 border-solid cursor-pointer transition-all duration-[250ms] ease-[cubic-bezier(.4,.0,.23,1)] before:content-[""] before:duration-300 before:origin-[0% 100%] before:w-[8px] before:h-[8px] before:absolute before:top-[0.49em] before:left-[0.3em] before:bg-night-black before:rounded-full before:scale-0 before:delay-300 border-night-black dark:border-max-white"
+      />
+      <span
+        class="pointer-events-none duration-500 opacity-1"
+      >
+        Option 3
+      </span>
+      <ins
+        class="pointer-events-none absolute block bottom-0 left-[2em] h-0 w-full overflow-hidden no-underline transition-[height] duration-300 ease-[cubic-bezier(.4,.0,.23,1)] "
+      >
+        <i
+          class="pointer-events-none absolute bottom-0 not-italic text-hyper-red"
+        >
+          Option 3
+        </i>
+      </ins>
+    </label>
+  </div>
+</DocumentFragment>
+`;

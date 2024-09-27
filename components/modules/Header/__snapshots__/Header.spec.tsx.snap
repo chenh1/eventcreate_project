@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header module with login link if logged out 1`] = `
+<div>
+  <div
+    class="z-50 fixed duration-300 ease-in-out top-0  p-2  dark:bg-night-black-300 px-0 py-1 w-screen duration-300 ease-in-out dark min-h-[56px] translate-y-0"
+  >
+    <div
+      class=" flex border-box justify-around w-full py-1 "
+    >
+      <div
+        class="w-full max-w-7xl px-4 xl:px-0"
+      >
+        <div
+          class=" grid  gap-4  p-2 grid-cols-2"
+        >
+          <a>
+            children
+          </a>
+          <div
+            class="md:hidden cursor-pointer flex flex-col max-w-min justify-center justify-self-end"
+          >
+            <div
+              class="animate-hamburgertochevronleftreverse  border-night-black dark:border-max-white border-2 w-6"
+            />
+            <div
+              class="animate-hamburgertochevronrightreverse  border-night-black dark:border-max-white border-2 w-6 mt-2"
+            />
+          </div>
+          <nav
+            class="col-span-2 md:col-span-1 duration-300 ease-in-out hidden h-0 md:flex md:h-full md:flex items-center justify-end"
+          >
+            <ul
+              class="flex flex-col md:flex-row items-center justify-end"
+            >
+              <li
+                class="inline mt-8 ml-12 md:mt-0"
+              >
+                <a>
+                  children
+                </a>
+              </li>
+              <li
+                class="inline mt-8 ml-12 md:mt-0"
+              >
+                <a>
+                  children
+                </a>
+              </li>
+              <li
+                class="inline mt-8 ml-12 md:mt-0"
+              >
+                <a
+                  data-cy="header-login-link"
+                >
+                  <span
+                    class="  relative cursor-pointer font-body text-night-black dark:text-max-white before:content-[""] before:absolute before:translate-y-[6px] before:bottom-0 before:duration-300 before:ease-in-out before:border-apex-blue before:w-0 before:border-2 before:opacity-0 hover:brightness-110 hover:before:w-full hover:before:opacity-100"
+                  >
+                    Login
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Header module with profile icon if logged in 1`] = `
+<div>
+  <div
+    class="z-50 fixed duration-300 ease-in-out top-0  p-2  dark:bg-night-black-300 px-0 py-1 w-screen duration-300 ease-in-out dark min-h-[56px] translate-y-0"
+  >
+    <div
+      class=" flex border-box justify-around w-full py-1 "
+    >
+      <div
+        class="w-full max-w-7xl px-4 xl:px-0"
+      >
+        <div
+          class=" grid  gap-4  p-2 grid-cols-2"
+        >
+          <a>
+            children
+          </a>
+          <div
+            class="md:hidden cursor-pointer flex flex-col max-w-min justify-center justify-self-end"
+          >
+            <div
+              class="animate-hamburgertochevronleftreverse  border-night-black dark:border-max-white border-2 w-6"
+            />
+            <div
+              class="animate-hamburgertochevronrightreverse  border-night-black dark:border-max-white border-2 w-6 mt-2"
+            />
+          </div>
+          <nav
+            class="col-span-2 md:col-span-1 duration-300 ease-in-out hidden h-0 md:flex md:h-full md:flex items-center justify-end"
+          >
+            <ul
+              class="flex flex-col md:flex-row items-center justify-end"
+            >
+              <li
+                class="inline mt-8 ml-12 md:mt-0"
+              >
+                <a>
+                  children
+                </a>
+              </li>
+              <li
+                class="inline mt-8 ml-12 md:mt-0"
+              >
+                <a>
+                  children
+                </a>
+              </li>
+              <li
+                class="inline mt-8 ml-12 md:mt-0"
+              >
+                <div
+                  class="flex flex-col items-center justify-center w-full h-full"
+                >
+                  <div
+                    class="cursor-pointer relative w-12 h-12"
+                    data-testid="toggleProfile"
+                  >
+                    <div
+                      class="absolute w-full h-full rounded-full bg-gradient-to-br from-blue-400 to-blue-600"
+                    />
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

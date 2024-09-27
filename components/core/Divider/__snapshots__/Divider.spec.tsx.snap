@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a horizontal divider 1`] = `
+<DocumentFragment>
+  <hr
+    class="w-full h-0 border-0 border-t-[1px] border-night-black-300 dark:border-max-white "
+  />
+</DocumentFragment>
+`;
+
+exports[`renders a vertical divider 1`] = `
+<DocumentFragment>
+  <hr
+    class="w-full h-0 border-0 border-t-[1px] border-night-black-300 dark:border-max-white "
+  />
+</DocumentFragment>
+`;

@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the side view paths module 1`] = `
+<div>
+  <div
+    class=" grid  gap-4  p-2 overflow-y-auto h-screen w-screen md:w-[50vw]"
+  >
+    <svg
+      height="100"
+      width="100"
+    >
+      <defs>
+        <lineargradient
+          id="lg"
+          x1="0"
+          x2="0"
+          y1="0"
+          y2="1"
+        >
+          <stop
+            offset="0%"
+            stop-color="#fd9b93"
+            stop-opacity="1"
+          />
+          <stop
+            offset="100%"
+            stop-color="#fe6e9e"
+            stop-opacity="1"
+          />
+        </lineargradient>
+      </defs>
+      <rect
+        fill="#272b4d"
+        height="100"
+        rx="14"
+        width="100"
+      />
+      <g
+        class="visx-group"
+        transform="translate(80, 80)"
+      >
+        <path
+          class="visx-link visx-link-vertical-diagonal"
+          d="M-30,0C-30,-20,-30,-20,-30,-40"
+          fill="none"
+          stroke="#374469"
+          stroke-width="2"
+        />
+        <path
+          class="visx-link visx-link-vertical-diagonal"
+          d="M-30,-40C-30,-60,-30,-60,-30,-80"
+          fill="none"
+          stroke="#374469"
+          stroke-width="2"
+        />
+        <g
+          class="visx-group cursor-pointer"
+          transform="translate(-30, 0)"
+        >
+          <rect
+            fill="url('#lg')"
+            height="56"
+            rx="10"
+            stroke-dasharray="2,2"
+            stroke-opacity="0.6"
+            stroke-width="1"
+            width="4.8ch"
+            x="-2.4ch"
+            y="-28"
+          />
+          <text
+            data-cy="-root-text"
+            dy=".33em"
+            fill="#41ABFF"
+            font-family=""Space Grotesk", sans-serif"
+            font-size="18"
+            style="pointer-events: none; width: 200px;"
+            text-anchor="middle"
+            width="300px"
+          >
+            1.01
+          </text>
+        </g>
+        <g
+          class="visx-group cursor-pointer relative"
+          transform="translate(-30, -40)"
+        >
+          <circle
+            data-cy="-node-1"
+            fill="#272b4d"
+            height="56"
+            r="28"
+            stroke="#41ABFF"
+            stroke-width="1"
+            width="56"
+            x="-28"
+            y="-28"
+          />
+          <text
+            class=""
+            data-cy="-node-text-1"
+            dx="0"
+            dy=".33em"
+            fill="#ffffff"
+            font-family=""Space Grotesk", sans-serif"
+            font-size="18"
+            style="pointer-events: none;"
+            text-anchor="middle"
+          >
+            1.02
+          </text>
+        </g>
+        <g
+          class="visx-group cursor-pointer relative"
+          transform="translate(-30, -80)"
+        >
+          <circle
+            data-cy="-node-2"
+            fill="#272b4d"
+            height="56"
+            r="28"
+            stroke="#41ABFF"
+            stroke-width="1"
+            width="56"
+            x="-28"
+            y="-28"
+          />
+          <text
+            class=""
+            data-cy="-node-text-2"
+            dx="0"
+            dy=".33em"
+            fill="#ffffff"
+            font-family=""Space Grotesk", sans-serif"
+            font-size="18"
+            style="pointer-events: none;"
+            text-anchor="middle"
+          >
+            1.03
+          </text>
+        </g>
+      </g>
+    </svg>
+  </div>
+</div>
+`;

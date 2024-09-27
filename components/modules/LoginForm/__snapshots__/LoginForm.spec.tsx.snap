@@ -1,0 +1,650 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders LoginForm module 1`] = `
+<DocumentFragment>
+  <div
+    class=" grid  gap-8  p-2 min-w-[300px] "
+  >
+    <div
+      class=" grid  gap-4  p-2 "
+    >
+      <h4
+        class="text-night-black dark:text-max-white font-headings font-semibold text-lg sm:text-md text-center"
+      >
+        Login
+      </h4>
+      <div
+        class="justify-self-center cursor-pointer p-2 h-12 w-full sm:w-12 hover:w-full duration-300 ease-in-out overflow-hidden bg-apex-blue rounded-full"
+      >
+        <div
+          class=" grid  gap-4  p-2 grid-cols-[auto_auto]"
+        >
+          <div
+            class=" grid  gap-4  p-2 w-8 h-8"
+          >
+            <img
+              alt="Google icon"
+              height="32"
+              src="https://biz-web-client-demo-static.s3.us-east-2.amazonaws.com/google_icon_e7422bae08.png"
+              width="32"
+            />
+          </div>
+          <div
+            class=" grid  gap-4  p-2 self-center"
+          >
+            <h4
+              class="text-night-black dark:text-max-white font-headings font-semibold text-xl whitespace-nowrap"
+            >
+              Login with Google
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form>
+      <div
+        class=" grid  gap-8  p-2 "
+      >
+        <div
+          class=" grid  gap-2  p-2 "
+        >
+          <div
+            class=" grid  gap-8  p-2 "
+          >
+            <div
+              class="relative "
+            >
+              <label
+                class="  pointer-events-none font-body duration-300 absolute block text-md font-light text-night-black dark:text-max-white top-0 left-0  "
+                for="email"
+              >
+                Email
+              </label>
+              <input
+                class="  max-w-full w-full text-night-black dark:text-max-white font-body bg-transparent border-b-2 focus:outline-none border-night-black dark:border-max-white"
+                data-cy="login-email-field"
+                name="email"
+                type="text"
+              />
+            </div>
+            <div
+              class="relative "
+            >
+              <label
+                class="  pointer-events-none font-body duration-300 absolute block text-md font-light text-night-black dark:text-max-white top-0 left-0  "
+                for="password"
+              >
+                Password
+              </label>
+              <input
+                class="  max-w-full w-full text-night-black dark:text-max-white font-body bg-transparent border-b-2 focus:outline-none border-night-black dark:border-max-white"
+                data-cy="login-password-field"
+                name="password"
+                type="password"
+              />
+            </div>
+          </div>
+          <span
+            class="relative"
+          >
+            <input
+              class="  h-0 w-0 absolute"
+              data-testid="checkbox"
+              id="tempId"
+              type="checkbox"
+              value=""
+            />
+            <label
+              class="  font-body relative flex my-[.6em] items-center text-night-black dark:text-max-white transition-colors duration-[250ms] ease-[cubic-bezier(.4,.0,.23,1)]"
+              for="tempId"
+            >
+              <span
+                class="pointer-events-none flex justify-center items-center mr-[.9em] w-[1.1em] h-[1.1em] bg-transparent border-2 border-solid rounded-sm cursor-pointer transition-all duration-[250ms] ease-[cubic-bezier(.4,.0,.23,1)] border-night-black dark:border-max-white"
+              />
+              <span
+                class="pointer-events-none duration-500 opacity-1"
+              >
+                Show password
+              </span>
+              <ins
+                class="pointer-events-none absolute block bottom-0 left-[2em] h-0 w-full overflow-hidden no-underline transition-[height] duration-300 ease-[cubic-bezier(.4,.0,.23,1)] "
+              >
+                <i
+                  class="pointer-events-none absolute bottom-0 not-italic text-hyper-red"
+                >
+                  Show password
+                </i>
+              </ins>
+            </label>
+          </span>
+        </div>
+        <div
+          class=" grid  gap-8  p-2 "
+        >
+          <div
+            class=" grid  gap-2  p-2 "
+          >
+            <button
+              class="   w-full sm:w-auto cursor-pointer border-2 font-bold leading-none inline-block rounded-lg text-center font-headings relative text-max-white px-5 py-2.5   bg-hyper-red border-hyper-red dark:bg-hyper-red dark:border-hyper-red"
+              data-cy="login-register-cta"
+              data-testid="button"
+              type="submit"
+            >
+              <div
+                class="bg-hyper-red border-hyper-red dark:bg-hyper-red dark:border-hyper-red rounded-lg absolute left-0 top-0 w-full h-full "
+              />
+              <span
+                class="pointer-events-none relative z-10"
+              >
+                Login
+              </span>
+            </button>
+            <a
+              class="text-center"
+              data-testid="openForgotPassword"
+              href="javascript:void(0)"
+            >
+              <span
+                class="  relative cursor-pointer font-body text-night-black dark:text-max-white before:content-[""] before:absolute before:translate-y-[6px] before:bottom-0 before:duration-300 before:ease-in-out before:border-apex-blue before:w-0 before:border-2 before:opacity-0 hover:brightness-110 hover:before:w-full hover:before:opacity-100"
+              >
+                Forgot your password? Click here
+              </span>
+            </a>
+          </div>
+          <div
+            class=" grid  gap-4  p-2 "
+          >
+            <button
+              class=" secondary  w-full sm:w-auto cursor-pointer border-2 font-bold leading-none inline-block rounded-lg text-center font-headings relative text-slate-700 bg-transparent border-slate-700 dark:text-max-white dark:border-max-white active:text-max-white active:bg-slate-700 active:border-slate-700 dark:active:bg-max-white dark:active:border-max-white dark:active:text-night-black px-5 py-2.5   "
+              data-testid="button"
+              type="button"
+            >
+              <div
+                class="triangle left"
+              >
+                <div />
+              </div>
+              <div
+                class="triangle right"
+              >
+                <div />
+              </div>
+              <span
+                class="pointer-events-none relative z-10"
+              >
+                New here? Register now
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`shows registration form module 1`] = `
+<DocumentFragment>
+  <div
+    class=" grid  gap-8  p-2 min-w-[300px] "
+  >
+    <div
+      class=" grid  gap-4  p-2 "
+    >
+      <h4
+        class="text-night-black dark:text-max-white font-headings font-semibold text-lg sm:text-md text-center"
+      >
+        Login
+      </h4>
+      <div
+        class="justify-self-center cursor-pointer p-2 h-12 w-full sm:w-12 hover:w-full duration-300 ease-in-out overflow-hidden bg-apex-blue rounded-full"
+      >
+        <div
+          class=" grid  gap-4  p-2 grid-cols-[auto_auto]"
+        >
+          <div
+            class=" grid  gap-4  p-2 w-8 h-8"
+          >
+            <img
+              alt="Google icon"
+              height="32"
+              src="https://biz-web-client-demo-static.s3.us-east-2.amazonaws.com/google_icon_e7422bae08.png"
+              width="32"
+            />
+          </div>
+          <div
+            class=" grid  gap-4  p-2 self-center"
+          >
+            <h4
+              class="text-night-black dark:text-max-white font-headings font-semibold text-xl whitespace-nowrap"
+            >
+              Login with Google
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form>
+      <div
+        class=" grid  gap-8  p-2 "
+      >
+        <div
+          class=" grid  gap-2  p-2 "
+        >
+          <div
+            class=" grid  gap-8  p-2 "
+          >
+            <div
+              class="relative "
+            >
+              <label
+                class="  pointer-events-none font-body duration-300 absolute block text-md font-light text-night-black dark:text-max-white top-0 left-0  "
+                for="email"
+              >
+                Email
+              </label>
+              <input
+                class="  max-w-full w-full text-night-black dark:text-max-white font-body bg-transparent border-b-2 focus:outline-none border-night-black dark:border-max-white"
+                data-cy="login-email-field"
+                name="email"
+                type="text"
+              />
+            </div>
+            <div
+              class="relative "
+            >
+              <label
+                class="  pointer-events-none font-body duration-300 absolute block text-md font-light text-night-black dark:text-max-white top-0 left-0  "
+                for="password"
+              >
+                Password
+              </label>
+              <input
+                class="  max-w-full w-full text-night-black dark:text-max-white font-body bg-transparent border-b-2 focus:outline-none border-night-black dark:border-max-white"
+                data-cy="login-password-field"
+                name="password"
+                type="password"
+              />
+            </div>
+            <div
+              class="relative "
+            >
+              <label
+                class="  pointer-events-none font-body duration-300 absolute block text-md font-light text-night-black dark:text-max-white top-0 left-0  "
+                for="passwordConfirmation"
+              >
+                Confirm Password
+              </label>
+              <input
+                class="  max-w-full w-full text-night-black dark:text-max-white font-body bg-transparent border-b-2 focus:outline-none border-night-black dark:border-max-white"
+                name="passwordConfirmation"
+                type="password"
+              />
+            </div>
+          </div>
+          <span
+            class="relative"
+          >
+            <input
+              class="  h-0 w-0 absolute"
+              data-testid="checkbox"
+              id="tempId"
+              type="checkbox"
+              value=""
+            />
+            <label
+              class="  font-body relative flex my-[.6em] items-center text-night-black dark:text-max-white transition-colors duration-[250ms] ease-[cubic-bezier(.4,.0,.23,1)]"
+              for="tempId"
+            >
+              <span
+                class="pointer-events-none flex justify-center items-center mr-[.9em] w-[1.1em] h-[1.1em] bg-transparent border-2 border-solid rounded-sm cursor-pointer transition-all duration-[250ms] ease-[cubic-bezier(.4,.0,.23,1)] border-night-black dark:border-max-white"
+              />
+              <span
+                class="pointer-events-none duration-500 opacity-1"
+              >
+                Show password
+              </span>
+              <ins
+                class="pointer-events-none absolute block bottom-0 left-[2em] h-0 w-full overflow-hidden no-underline transition-[height] duration-300 ease-[cubic-bezier(.4,.0,.23,1)] "
+              >
+                <i
+                  class="pointer-events-none absolute bottom-0 not-italic text-hyper-red"
+                >
+                  Show password
+                </i>
+              </ins>
+            </label>
+          </span>
+        </div>
+        <div
+          class=" grid  gap-8  p-2 "
+        >
+          <div
+            class=" grid  gap-2  p-2 "
+          >
+            <button
+              class="   w-full sm:w-auto cursor-pointer border-2 font-bold leading-none inline-block rounded-lg text-center font-headings relative text-max-white px-5 py-2.5   bg-hyper-red border-hyper-red dark:bg-hyper-red dark:border-hyper-red"
+              data-cy="login-register-cta"
+              data-testid="button"
+              type="submit"
+            >
+              <div
+                class="bg-hyper-red border-hyper-red dark:bg-hyper-red dark:border-hyper-red rounded-lg absolute left-0 top-0 w-full h-full "
+              />
+              <span
+                class="pointer-events-none relative z-10"
+              >
+                Register
+              </span>
+            </button>
+          </div>
+          <div
+            class=" grid  gap-4  p-2 "
+          >
+            <button
+              class=" secondary  w-full sm:w-auto cursor-pointer border-2 font-bold leading-none inline-block rounded-lg text-center font-headings relative text-slate-700 bg-transparent border-slate-700 dark:text-max-white dark:border-max-white active:text-max-white active:bg-slate-700 active:border-slate-700 dark:active:bg-max-white dark:active:border-max-white dark:active:text-night-black px-5 py-2.5   "
+              data-testid="button"
+              type="button"
+            >
+              <div
+                class="triangle left"
+              >
+                <div />
+              </div>
+              <div
+                class="triangle right"
+              >
+                <div />
+              </div>
+              <span
+                class="pointer-events-none relative z-10"
+              >
+                Login instead
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`shows reset form module and reverts back if cancelled 1`] = `
+<DocumentFragment>
+  <div
+    class=" grid  gap-8  p-2 min-w-[300px] "
+  >
+    <div
+      class=" grid  gap-4  p-2 "
+    >
+      <h4
+        class="text-night-black dark:text-max-white font-headings font-semibold text-lg sm:text-md text-center"
+      >
+        Login
+      </h4>
+      <div
+        class="justify-self-center cursor-pointer p-2 h-12 w-full sm:w-12 hover:w-full duration-300 ease-in-out overflow-hidden bg-apex-blue rounded-full"
+      >
+        <div
+          class=" grid  gap-4  p-2 grid-cols-[auto_auto]"
+        >
+          <div
+            class=" grid  gap-4  p-2 w-8 h-8"
+          >
+            <img
+              alt="Google icon"
+              height="32"
+              src="https://biz-web-client-demo-static.s3.us-east-2.amazonaws.com/google_icon_e7422bae08.png"
+              width="32"
+            />
+          </div>
+          <div
+            class=" grid  gap-4  p-2 self-center"
+          >
+            <h4
+              class="text-night-black dark:text-max-white font-headings font-semibold text-xl whitespace-nowrap"
+            >
+              Login with Google
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form>
+      <div
+        class=" grid  gap-8  p-2 "
+      >
+        <p
+          class=" text-night-black dark:text-max-white font-body font-body text-sm italic"
+        >
+          Forgot your password? Enter the email you registered with the password you need to reset and we'll send you an email to update your password.
+        </p>
+        <div
+          class="relative "
+        >
+          <label
+            class="  pointer-events-none font-body duration-300 absolute block text-md font-light text-night-black dark:text-max-white top-0 left-0  "
+            for="email"
+          >
+            Email
+          </label>
+          <input
+            class="  max-w-full w-full text-night-black dark:text-max-white font-body bg-transparent border-b-2 focus:outline-none border-night-black dark:border-max-white"
+            name="email"
+            type="text"
+          />
+        </div>
+        <button
+          class="   w-full sm:w-auto cursor-pointer border-2 font-bold leading-none inline-block rounded-lg text-center font-headings relative text-max-white px-5 py-2.5   bg-hyper-red border-hyper-red dark:bg-hyper-red dark:border-hyper-red"
+          data-testid="button"
+          type="submit"
+        >
+          <div
+            class="bg-hyper-red border-hyper-red dark:bg-hyper-red dark:border-hyper-red rounded-lg absolute left-0 top-0 w-full h-full "
+          />
+          <span
+            class="pointer-events-none relative z-10"
+          >
+            Reset Password
+          </span>
+        </button>
+        <a
+          class="text-center"
+          data-testid="cancelForgotPassword"
+          href="javascript:void(0)"
+        >
+          <span
+            class="  relative cursor-pointer font-body text-night-black dark:text-max-white before:content-[""] before:absolute before:translate-y-[6px] before:bottom-0 before:duration-300 before:ease-in-out before:border-apex-blue before:w-0 before:border-2 before:opacity-0 hover:brightness-110 hover:before:w-full hover:before:opacity-100"
+          >
+            Nevermind, I remember my password
+          </span>
+        </a>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`shows reset form module and reverts back if cancelled 2`] = `
+<DocumentFragment>
+  <div
+    class=" grid  gap-8  p-2 min-w-[300px] "
+  >
+    <div
+      class=" grid  gap-4  p-2 "
+    >
+      <h4
+        class="text-night-black dark:text-max-white font-headings font-semibold text-lg sm:text-md text-center"
+      >
+        Login
+      </h4>
+      <div
+        class="justify-self-center cursor-pointer p-2 h-12 w-full sm:w-12 hover:w-full duration-300 ease-in-out overflow-hidden bg-apex-blue rounded-full"
+      >
+        <div
+          class=" grid  gap-4  p-2 grid-cols-[auto_auto]"
+        >
+          <div
+            class=" grid  gap-4  p-2 w-8 h-8"
+          >
+            <img
+              alt="Google icon"
+              height="32"
+              src="https://biz-web-client-demo-static.s3.us-east-2.amazonaws.com/google_icon_e7422bae08.png"
+              width="32"
+            />
+          </div>
+          <div
+            class=" grid  gap-4  p-2 self-center"
+          >
+            <h4
+              class="text-night-black dark:text-max-white font-headings font-semibold text-xl whitespace-nowrap"
+            >
+              Login with Google
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form>
+      <div
+        class=" grid  gap-8  p-2 "
+      >
+        <div
+          class=" grid  gap-2  p-2 "
+        >
+          <div
+            class=" grid  gap-8  p-2 "
+          >
+            <div
+              class="relative "
+            >
+              <label
+                class="  pointer-events-none font-body duration-300 absolute block text-md font-light text-night-black dark:text-max-white top-0 left-0  "
+                for="email"
+              >
+                Email
+              </label>
+              <input
+                class="  max-w-full w-full text-night-black dark:text-max-white font-body bg-transparent border-b-2 focus:outline-none border-night-black dark:border-max-white"
+                data-cy="login-email-field"
+                name="email"
+                type="text"
+              />
+            </div>
+            <div
+              class="relative "
+            >
+              <label
+                class="  pointer-events-none font-body duration-300 absolute block text-md font-light text-night-black dark:text-max-white top-0 left-0  "
+                for="password"
+              >
+                Password
+              </label>
+              <input
+                class="  max-w-full w-full text-night-black dark:text-max-white font-body bg-transparent border-b-2 focus:outline-none border-night-black dark:border-max-white"
+                data-cy="login-password-field"
+                name="password"
+                type="password"
+              />
+            </div>
+          </div>
+          <span
+            class="relative"
+          >
+            <input
+              class="  h-0 w-0 absolute"
+              data-testid="checkbox"
+              id="tempId"
+              type="checkbox"
+              value=""
+            />
+            <label
+              class="  font-body relative flex my-[.6em] items-center text-night-black dark:text-max-white transition-colors duration-[250ms] ease-[cubic-bezier(.4,.0,.23,1)]"
+              for="tempId"
+            >
+              <span
+                class="pointer-events-none flex justify-center items-center mr-[.9em] w-[1.1em] h-[1.1em] bg-transparent border-2 border-solid rounded-sm cursor-pointer transition-all duration-[250ms] ease-[cubic-bezier(.4,.0,.23,1)] border-night-black dark:border-max-white"
+              />
+              <span
+                class="pointer-events-none duration-500 opacity-1"
+              >
+                Show password
+              </span>
+              <ins
+                class="pointer-events-none absolute block bottom-0 left-[2em] h-0 w-full overflow-hidden no-underline transition-[height] duration-300 ease-[cubic-bezier(.4,.0,.23,1)] "
+              >
+                <i
+                  class="pointer-events-none absolute bottom-0 not-italic text-hyper-red"
+                >
+                  Show password
+                </i>
+              </ins>
+            </label>
+          </span>
+        </div>
+        <div
+          class=" grid  gap-8  p-2 "
+        >
+          <div
+            class=" grid  gap-2  p-2 "
+          >
+            <button
+              class="   w-full sm:w-auto cursor-pointer border-2 font-bold leading-none inline-block rounded-lg text-center font-headings relative text-max-white px-5 py-2.5   bg-hyper-red border-hyper-red dark:bg-hyper-red dark:border-hyper-red"
+              data-cy="login-register-cta"
+              data-testid="button"
+              type="submit"
+            >
+              <div
+                class="bg-hyper-red border-hyper-red dark:bg-hyper-red dark:border-hyper-red rounded-lg absolute left-0 top-0 w-full h-full "
+              />
+              <span
+                class="pointer-events-none relative z-10"
+              >
+                Login
+              </span>
+            </button>
+            <a
+              class="text-center"
+              data-testid="openForgotPassword"
+              href="javascript:void(0)"
+            >
+              <span
+                class="  relative cursor-pointer font-body text-night-black dark:text-max-white before:content-[""] before:absolute before:translate-y-[6px] before:bottom-0 before:duration-300 before:ease-in-out before:border-apex-blue before:w-0 before:border-2 before:opacity-0 hover:brightness-110 hover:before:w-full hover:before:opacity-100"
+              >
+                Forgot your password? Click here
+              </span>
+            </a>
+          </div>
+          <div
+            class=" grid  gap-4  p-2 "
+          >
+            <button
+              class=" secondary  w-full sm:w-auto cursor-pointer border-2 font-bold leading-none inline-block rounded-lg text-center font-headings relative text-slate-700 bg-transparent border-slate-700 dark:text-max-white dark:border-max-white active:text-max-white active:bg-slate-700 active:border-slate-700 dark:active:bg-max-white dark:active:border-max-white dark:active:text-night-black px-5 py-2.5   "
+              data-testid="button"
+              type="button"
+            >
+              <div
+                class="triangle left"
+              >
+                <div />
+              </div>
+              <div
+                class="triangle right"
+              >
+                <div />
+              </div>
+              <span
+                class="pointer-events-none relative z-10"
+              >
+                New here? Register now
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;

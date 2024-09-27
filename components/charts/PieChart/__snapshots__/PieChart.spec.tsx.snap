@@ -1,0 +1,362 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a Pie chart given the dataset 1`] = `
+<DocumentFragment>
+  <svg
+    height="300"
+    width="500"
+  >
+    <defs>
+      <lineargradient
+        id="visx-pie-gradient"
+        x1="0"
+        x2="0"
+        y1="0"
+        y2="1"
+      >
+        <stop
+          offset="0%"
+          stop-color="#F02FC2"
+          stop-opacity="1"
+        />
+        <stop
+          offset="100%"
+          stop-color="#6094EA"
+          stop-opacity="1"
+        />
+      </lineargradient>
+    </defs>
+    <rect
+      fill="url('#visx-pie-gradient')"
+      height="300"
+      rx="14"
+      width="500"
+    />
+    <g
+      class="visx-group"
+      transform="translate(250, 150)"
+    >
+      <g>
+        <path
+          d="M-2.3880612583373385e-14,-130L-1.4695761589768237e-14,-80Z"
+          fill="rgba(255,255,255,0.3)"
+        />
+        <g
+          style="opacity: 0;"
+        >
+          <text
+            dy=".33em"
+            fill="white"
+            font-family=""Space Grotesk", sans-serif"
+            font-size="14"
+            pointer-events="none"
+            text-anchor="middle"
+            x="-14.255517846507757"
+            y="104.02778576384243"
+          >
+            MSFT: 360 shares
+          </text>
+        </g>
+      </g>
+      <g>
+        <path
+          d="M-2.3880612583373385e-14,-130L-1.4695761589768237e-14,-80Z"
+          fill="rgba(255,255,255,0.2)"
+        />
+        <g
+          style="opacity: 0;"
+        >
+          <text
+            dy=".33em"
+            fill="white"
+            font-family=""Space Grotesk", sans-serif"
+            font-size="14"
+            pointer-events="none"
+            text-anchor="middle"
+            x="-16.767097191966513"
+            y="-103.65261430255943"
+          >
+            EL: 123 shares
+          </text>
+        </g>
+      </g>
+      <g>
+        <path
+          d="M-2.3880612583373385e-14,-130L-1.4695761589768237e-14,-80Z"
+          fill="rgba(255,255,255,0.1)"
+        />
+        <g
+          style="opacity: 0;"
+        >
+          <text
+            dy=".33em"
+            fill="white"
+            font-family=""Space Grotesk", sans-serif"
+            font-size="14"
+            pointer-events="none"
+            text-anchor="middle"
+            x="-61.75194654045388"
+            y="-84.92171158464086"
+          >
+            AMD: 238 shares
+          </text>
+        </g>
+      </g>
+      <g>
+        <path
+          d="M-2.3880612583373385e-14,-130L-1.4695761589768237e-14,-80Z"
+          fill="rgba(255,255,255,0.7)"
+        />
+        <g
+          style="opacity: 0;"
+        >
+          <text
+            dy=".33em"
+            fill="white"
+            font-family=""Space Grotesk", sans-serif"
+            font-size="14"
+            pointer-events="none"
+            text-anchor="middle"
+            x="-101.52236037314161"
+            y="-26.799446715668736"
+          >
+            V: 291 shares
+          </text>
+        </g>
+      </g>
+      <g>
+        <path
+          d="M7.960204194457796e-15,-130L4.898587196589413e-15,-80Z"
+          fill="rgba(255,255,255,0.6)"
+        />
+        <g
+          style="opacity: 0;"
+        >
+          <text
+            dy=".33em"
+            fill="white"
+            font-family=""Space Grotesk", sans-serif"
+            font-size="14"
+            pointer-events="none"
+            text-anchor="middle"
+            x="79.1247850377109"
+            y="-69.02367994200283"
+          >
+            AAPL: 663 shares
+          </text>
+        </g>
+      </g>
+      <g>
+        <path
+          d="M7.960204194457796e-15,-130L4.898587196589413e-15,-80Z"
+          fill="rgba(255,255,255,0.5)"
+        />
+        <g
+          style="opacity: 0;"
+        >
+          <text
+            dy=".33em"
+            fill="white"
+            font-family=""Space Grotesk", sans-serif"
+            font-size="14"
+            pointer-events="none"
+            text-anchor="middle"
+            x="81.0286082929906"
+            y="66.77847436188621"
+          >
+            NKE: 429 shares
+          </text>
+        </g>
+      </g>
+      <g>
+        <path
+          d="M-2.3880612583373385e-14,-130L-1.4695761589768237e-14,-80Z"
+          fill="rgba(255,255,255,0.4)"
+        />
+        <g
+          style="opacity: 0;"
+        >
+          <text
+            dy=".33em"
+            fill="white"
+            font-family=""Space Grotesk", sans-serif"
+            font-size="14"
+            pointer-events="none"
+            text-anchor="middle"
+            x="-89.84391246666387"
+            y="54.34216956179098"
+          >
+            WM: 330 shares
+          </text>
+        </g>
+      </g>
+      <g>
+        <path
+          d="M-1.1940306291686693e-14,-65L0,0Z"
+          fill="rgba(93,30,91,1)"
+        />
+        <g
+          style="opacity: 0;"
+        >
+          <text
+            dy=".33em"
+            fill="white"
+            font-family=""Space Grotesk", sans-serif"
+            font-size="14"
+            pointer-events="none"
+            text-anchor="middle"
+            x="-19.690028446871068"
+            y="-25.856387600773004"
+          >
+            MSFT: $80596.8 total value
+          </text>
+        </g>
+      </g>
+      <g>
+        <path
+          d="M-1.1940306291686693e-14,-65L0,0Z"
+          fill="rgba(93,30,91,0.8)"
+        />
+        <g
+          style="opacity: 0;"
+        >
+          <text
+            dy=".33em"
+            fill="white"
+            font-family=""Space Grotesk", sans-serif"
+            font-size="14"
+            pointer-events="none"
+            text-anchor="middle"
+            x="-32.48766241530411"
+            y="0.8954277130160033"
+          >
+            EL: $36741.33 total value
+          </text>
+        </g>
+      </g>
+      <g>
+        <path
+          d="M-1.1940306291686693e-14,-65L0,0Z"
+          fill="rgba(93,30,91,0.6)"
+        />
+        <g
+          style="opacity: 0;"
+        >
+          <text
+            dy=".33em"
+            fill="white"
+            font-family=""Space Grotesk", sans-serif"
+            font-size="14"
+            pointer-events="none"
+            text-anchor="middle"
+            x="-28.50130749102901"
+            y="15.618113564122066"
+          >
+            AMD: $21924.56 total value
+          </text>
+        </g>
+      </g>
+      <g>
+        <path
+          d="M-1.1940306291686693e-14,-65L0,0Z"
+          fill="rgba(93,30,91,0.4)"
+        />
+        <g
+          style="opacity: 0;"
+        >
+          <text
+            dy=".33em"
+            fill="white"
+            font-family=""Space Grotesk", sans-serif"
+            font-size="14"
+            pointer-events="none"
+            text-anchor="middle"
+            x="-12.604766399343069"
+            y="29.956132327421578"
+          >
+            V: $61197.3 total value
+          </text>
+        </g>
+      </g>
+      <g>
+        <path
+          d="M3.980102097228898e-15,-65L0,0Z"
+          fill="rgba(93,30,91,1)"
+        />
+        <g
+          style="opacity: 0;"
+        >
+          <text
+            dy=".33em"
+            fill="white"
+            font-family=""Space Grotesk", sans-serif"
+            font-size="14"
+            pointer-events="none"
+            text-anchor="middle"
+            x="23.442745339502718"
+            y="22.509724364088147"
+          >
+            AAPL: $87900.54 total value
+          </text>
+        </g>
+      </g>
+      <g>
+        <path
+          d="M3.980102097228898e-15,-65L0,0Z"
+          fill="rgba(93,30,91,0.8)"
+        />
+        <g
+          style="opacity: 0;"
+        >
+          <text
+            dy=".33em"
+            fill="white"
+            font-family=""Space Grotesk", sans-serif"
+            font-size="14"
+            pointer-events="none"
+            text-anchor="middle"
+            x="29.367009541471404"
+            y="-13.922239424429087"
+          >
+            NKE: $61668.75 total value
+          </text>
+        </g>
+      </g>
+      <g>
+        <path
+          d="M3.980102097228898e-15,-65L0,0Z"
+          fill="rgba(93,30,91,0.6)"
+        />
+        <g
+          style="opacity: 0;"
+        >
+          <text
+            dy=".33em"
+            fill="white"
+            font-family=""Space Grotesk", sans-serif"
+            font-size="14"
+            pointer-events="none"
+            text-anchor="middle"
+            x="10.0708488744344"
+            y="-30.900291308469946"
+          >
+            WM: $39015.9 total value
+          </text>
+        </g>
+      </g>
+    </g>
+    <text
+      fill="white"
+      font-family=""Space Grotesk", sans-serif"
+      font-size="16"
+      font-weight="300"
+      pointer-events="none"
+      text-anchor="end"
+      x="484"
+      y="284"
+    >
+      .
+    </text>
+  </svg>
+</DocumentFragment>
+`;

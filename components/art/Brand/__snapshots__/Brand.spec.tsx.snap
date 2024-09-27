@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders company branding 1`] = `
+<DocumentFragment>
+  <div
+    class="brand  font-brand text-5xl"
+  >
+    <span
+      class=""
+    >
+      ba
+    </span>
+    <span
+      class="segment-2"
+    >
+      yba
+    </span>
+    <span
+      class="segment-3"
+    >
+      r
+    </span>
+    <span
+      class="segment-4"
+    >
+      oo
+    </span>
+  </div>
+</DocumentFragment>
+`;

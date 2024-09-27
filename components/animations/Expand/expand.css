@@ -1,0 +1,49 @@
+@keyframes expandHorizontal {
+  0% {
+    width: 0;
+  }
+  60% {
+    width: 105%;
+  }
+  80% {
+    width: 98%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes expandVertical {
+  0% {
+    height: 0;
+  }
+  80% {
+    height: 105%;
+  }
+  90% {
+    height: 98%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.expand > * {
+  overflow: hidden;
+}
+
+.expand > * *{
+  white-space: nowrap;
+}
+
+.expand.horizontal > * {
+  animation: expandHorizontal 1s ease-in-out;
+}
+
+.expand.vertical > * {
+  animation: expandVertical 1s ease-in-out;
+}
+
+.freeze {
+  animation-play-state: paused !important;
+}
