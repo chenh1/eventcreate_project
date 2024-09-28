@@ -22,7 +22,7 @@ export const PostsLayout = () => {
   const [ pageSize, setPageSize ] = useState<number>(12);
   const { testMode } = useFlippers({ key: 'testMode' });
 
-  const { data: { posts: { data } = {} } = {}, loading: postsLoading, error: postsError, fetchMore } = useQuery(postsQuery, {
+  const { data: { posts: { data = {} } = {} } = {}, loading: postsLoading, error: postsError, fetchMore } = useQuery(postsQuery, {
     variables: {
       page: page,
       pageSize: pageSize,

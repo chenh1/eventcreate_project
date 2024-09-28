@@ -19,7 +19,7 @@ interface RecommendedPostsProps {
 }
 
 export const RecommendedPosts: React.FC<RecommendedPostsProps> = ({ postId, relatedTags }: RecommendedPostsProps) => {
-  const { data: { posts: { data: posts } = {} } = {} } = useQuery(postsQuery, {
+  const { data: { posts: { data: posts = [] } = {} } = {} } = useQuery(postsQuery, {
     variables: { 
       page: 1,
       pageSize: 20,

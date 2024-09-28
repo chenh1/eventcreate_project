@@ -39,7 +39,7 @@ export const BadgeDrawer: React.FC<BadgeDrawerProps> = ({ myData, shouldOpenBadg
   // scatter medals/ribbons around the drawer
   useEffect(() => {
     // get progressData scores from myData
-    const { progressData: { completedModules } = {} } = myData || {}
+    const { progressData: { completedModules = [] } = {} } = myData || {}
 
     // get the interaction area
     const interactionArea = interactionAreaRef.current
