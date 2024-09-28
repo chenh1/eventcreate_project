@@ -42,7 +42,7 @@ export const Profile: React.FC<ProfileProps> = ({ setIsLoggingOut }: ProfileProp
     skip: session?.status !== 'authenticated'
   })
 
-  const { data: { videos: { data: videos } = {} } = {} } = useQuery(videosQuery, { 
+  const { data: { videos: { data: videos = [] } = {} } = {} } = useQuery(videosQuery, { 
     variables: { firstModule: 0, lastModule: 999 } ,
     skip: session?.status !== 'authenticated'
   })

@@ -104,7 +104,7 @@ export const ListProgress: React.FC<ListProgressProps> = (props: ListProgressPro
         {mapKeys?.map((key, i) => {
           const nodes = mappedTree[key]?.reverse()
           const index = parseInt(key.replace('s', ''));
-          const { attributes: { title } = {} } = allLearningPaths[index] || {}
+          const { attributes: { title = "" } = {} } = allLearningPaths[index] || {}
 
           return (
             <Box key={i}>

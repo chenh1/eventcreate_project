@@ -25,7 +25,7 @@ interface SideViewInModulesProps {
 export const SideViewInModules: React.FC<SideViewInModulesProps> = ({ isVertical, lessonModule, availableModules, rawTree }: SideViewInModulesProps) => {
   const session = useSession().data as SessionWithJwt | null;
 
-  const { data: { myData: { progressData } = {} } = {} } = useQuery(myDataQuery, { 
+  const { data: { myData: { progressData = {} } = {} } = {} } = useQuery(myDataQuery, { 
     context: { 
       headers: { 
         'Authorization': `Bearer ${session?.data?.jwt}` 
@@ -38,7 +38,7 @@ export const SideViewInModules: React.FC<SideViewInModulesProps> = ({ isVertical
   const showList = !!progressData
   const archetype = progressData?.archetype
 
-  const { data: { learningPaths: { data: allLearningPaths } = {} } = {} } = useQuery(allLearningPathsQuery)
+  const { data: { learningPaths: { data: allLearningPaths = [] } = {} } = {} } = useQuery(allLearningPathsQuery)
 
   const nameMapCallback = (nameMap, nodeName) => {
     return nameMap?.filter(({ attributes: { lessonModule } }) => lessonModule?.toString() === nodeName?.toString())[0]?.attributes?.title
@@ -47,7 +47,7 @@ export const SideViewInModules: React.FC<SideViewInModulesProps> = ({ isVertical
   const firstModule = Math.floor(lessonModule);
   const lastModule = firstModule + 0.999;
 
-  const { data: { videos: { data: videos } = {} } = {} } = useQuery(videosQuery, {
+  const { data: { videos: { data: videos = [] } = {} } = {} } = useQuery(videosQuery, {
     variables: {
       firstModule: showList ? 0 : firstModule,
       lastModule: showList ? 100 : lastModule
