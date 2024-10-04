@@ -1,6 +1,6 @@
 'use client'
 
-import type { VideoType } from "../../../graphql/queries/videos";
+import type { VideoType, Video } from "../../../graphql/queries/videos";
 import type { SessionWithJwt } from "@/components/constants/types";
 import type { RawTree } from "../../../graphql/queries/learningPaths";
 import React, { useState, useEffect } from "react";
@@ -27,25 +27,6 @@ import { archetypeIcons, archetypeDescriptions } from "../../constants/archetype
 import { LoginForm } from "../LoginForm/LoginForm";
 import './currentPath.css';
 
-interface Tag {
-  data: {
-    attributes: {
-      value: string
-    }
-  }[]
-}
-
-interface VideoAttributes {
-  lessonModule: string;
-  title: string;
-  description: string;
-  tags: Tag;
-}
-
-interface Video {
-  attributes: VideoAttributes
-}
-
 type Archetypes =
   "Essentialist" | 
   "Researcher" | 
@@ -68,9 +49,6 @@ type UserProfile = ArchetypeAttributes & {
   archetype: Archetypes | undefined;
 }
 
-interface ModuleNode {
-
-}
 
 const filterByTagConditions = (videos: { attributes: VideoType }[], condition: (any) => boolean) => {
   return videos?.filter(({ attributes }) => {
