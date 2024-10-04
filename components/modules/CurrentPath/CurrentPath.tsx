@@ -1,6 +1,7 @@
 'use client'
 
-import type { VideoType, Video } from "../../../graphql/queries/videos";
+import type { Archetypes } from "../../constants/archetypes";
+import type { VideoType } from "../../../graphql/queries/videos";
 import type { SessionWithJwt } from "@/components/constants/types";
 import type { RawTree } from "../../../graphql/queries/learningPaths";
 import React, { useState, useEffect } from "react";
@@ -27,16 +28,6 @@ import { archetypeIcons, archetypeDescriptions } from "../../constants/archetype
 import { LoginForm } from "../LoginForm/LoginForm";
 import './currentPath.css';
 
-type Archetypes =
-  "Essentialist" | 
-  "Researcher" | 
-  "Explorer" | 
-  "Pragmatist" | 
-  "Veteran" | 
-  "Adventurer" | 
-  "Enthusiast" | 
-  "Trailblazer" | 
-  "Scholar"
 
 interface ArchetypeAttributes {
   risk: number; 
@@ -284,7 +275,6 @@ export const CurrentPath = () => {
   // prompt user to sign in if unauthenticated. User can choose not to sign in but let them know they won't be able to save progress
   const learningPathTree = progressData?.customPath || constructedPath
 
-  const { attributes: previewModule } = videos?.filter(({ attributes: { lessonModule } }) => lessonModule == nodeData?.data.name)[0] || {}
   const { attributes: currentModule } = videos?.filter(({ attributes: { lessonModule } }) => lessonModule == progressData?.currentModule?.lessonModule)[0] || {}
   const examScore = progressData?.completedModules?.filter(({ lessonModule }) => lessonModule == nodeData?.data.name)[0]?.examScore
   const rank = getScoreRank(examScore)
