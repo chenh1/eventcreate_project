@@ -121,7 +121,6 @@ export const InteractiveTable: React.FC<InteractiveTableProps> = ({ question: qu
               />
             </FadeScroller>
             {(answerType === 'fill_in' || answerType === 'multi_click') && !isAnswered &&
-            // <button type="submit">SUBMIT</button>
               <Button type="submit" primary label="Submit answer" />
             }
           </Box>

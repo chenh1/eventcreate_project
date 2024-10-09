@@ -14,16 +14,13 @@ import { Paragraph } from "../../../core/Paragraph/Paragraph";
 interface InputFillInBlankProps {
   question: Question;
   onAnswer: (string) => void;
-  // compareAnswer: (arg1: any, arg2: any) => boolean;
   userInputAnswerSet: boolean[]
 }
 
 
 export const InputFillInBlank: React.FC<InputFillInBlankProps> = ({ question, onAnswer, userInputAnswerSet }: InputFillInBlankProps) => {
   const structuredQuestion = question?.question?.split('___');
-  
-  const numberOfBlanks = structuredQuestion?.filter(segment => segment === 'blank')?.length;
-  
+    
   return (
     <Box padding="0" className="justify-center">
       <Box gap="md" padding="0" className="max-w-xl">
@@ -44,14 +41,6 @@ export const InputFillInBlank: React.FC<InputFillInBlankProps> = ({ question, on
             )}
             <Button label="Submit" type="submit"/>
           </form>
-          {/* {question?.answers?.map((datum, i) => (
-            <Button 
-              key={i}
-              textAlign="left" 
-              // onClick={() => compareAnswer(datum.key)}
-              label={datum?.answer}
-            />
-          ))} */}
         </Box>
       </Box>
     </Box>

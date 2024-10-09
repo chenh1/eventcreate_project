@@ -1,7 +1,6 @@
 'use client'
 
-import type { Archetypes } from "../../constants/archetypes";
-import type { VideoType } from "../../../graphql/queries/videos";
+import type { UserProfile } from "./contentFilters";
 import type { SessionWithJwt } from "@/components/constants/types";
 import type { RawTree } from "../../../graphql/queries/learningPaths";
 import React, { useState, useEffect } from "react";
@@ -17,7 +16,6 @@ import { Box } from "../../containers/Box/Box";
 import colors from "../../constants/colors";
 import { Paragraph } from "../../core/Paragraph/Paragraph";
 import { Button } from "../../core/Button/Button";
-import getScoreRank from "../../utils/getScoreRank";
 import { updateMeMutation } from "../../../graphql/mutations/updateMe";
 import { Loader } from "../../modules/Loader/Loader";
 import { Overlay } from "../../containers/Overlay/Overlay";
@@ -26,118 +24,9 @@ import { allLearningPathsQuery } from "../../../graphql/queries/learningPaths";
 import { ScrollMessage } from "./ScrollMessage";
 import { archetypeIcons, archetypeDescriptions } from "../../constants/archetypes";
 import { LoginForm } from "../LoginForm/LoginForm";
+import { getArchetype, filterVideos } from "./contentFilters";
 import './currentPath.css';
 
-
-interface ArchetypeAttributes {
-  risk: number; 
-  experience: number; 
-  patience: number; 
-  willingness: number;
-}
-
-type UserProfile = ArchetypeAttributes & {
-  archetype: Archetypes | undefined;
-}
-
-
-const filterByTagConditions = (videos: { attributes: VideoType }[], condition: (any) => boolean) => {
-  return videos?.filter(({ attributes }) => {
-    const { tags: tagsData } = attributes
-    const attributesSet = tagsData?.data
-    const tags = attributesSet?.map(({ attributes: { value } }) => value)
-    return condition(tags)
-  })
-}
-
-const filterVideos = (videos: { attributes: VideoType }[], userProfile: UserProfile): { attributes: VideoType }[] => {
-  const { archetype } = userProfile
-  let filtered = [...videos]
-
-  switch (archetype) {
-    // only novice  
-    case "Essentialist":
-      filtered = filterByTagConditions(videos, tags => tags.includes('novice'))
-    //All intro only, risk averse and risk moderate, all series
-    case "Researcher":
-      filtered = filterByTagConditions(videos, tags => tags.includes('introductory') && (tags.includes('risk_averse') || tags.includes('risk_moderate')))
-    //All intro and details, risk averse and risk moderate, all series
-    case "Explorer":
-      filtered = filterByTagConditions(videos, tags => (tags.includes('introductory') || tags.includes('details')) && (tags.includes('risk_averse') || tags.includes('risk_moderate')))
-    //All details and additional, series 2-5
-    case "Pragmatist":
-      filtered = filterByTagConditions(videos, tags => (tags.includes('details') || tags.includes('additional')) && (tags.includes('risk_averse') || tags.includes('risk_moderate')) && !tags.includes("novice"))
-    //All details and additional, risk averse and risk moderate, series 4 & 5
-    case "Veteran":
-      filtered = filterByTagConditions(videos, tags => (tags.includes('details') || tags.includes('additional')) && (tags.includes('risk_averse') || tags.includes('risk_moderate')) && !tags.includes("novice") && !tags.includes("beginner") && !tags.includes("intermediate"))
-    //All details and additional, series 4 & 5
-    case "Adventurer":
-      filtered = filterByTagConditions(videos, tags => (tags.includes('details') || tags.includes('additional')) && !tags.includes("novice") && !tags.includes("beginner") && !tags.includes("intermediate"))
-    //Series 3-5
-    case "Enthusiast":
-      filtered = filterByTagConditions(videos, tags => !tags.includes("novice") && !tags.includes("beginner"))
-    //All intro and details and additional, risk averse and risk moderate, all series
-    case "Trailblazer":
-      filtered = filterByTagConditions(videos, tags => (tags.includes('introductory') || tags.includes('details') || tags.includes('additional')) && (tags.includes('risk_averse') || tags.includes('risk_moderate')))
-    //All videos
-    case "Scholar":
-      filtered = [...videos]
-  }
-
-  return filtered;
-}
-
-export const getArchetype = ({ risk, experience, patience, willingness }: ArchetypeAttributes): Archetypes => {
-  // only novice
-  if (risk === 1 && experience === 1 && (patience <= 3 || willingness <= 3)) {
-    return "Essentialist"
-  }
-
-  //All intro only, risk averse and risk moderate, all series
-  if (risk <= 2 && experience === 1 && (patience <= 4 || willingness <= 4)) {
-    return "Researcher"
-  }
-
-  //All intro and details, risk averse and risk moderate, all series
-  if (risk <= 2 && experience === 1 && (patience <= 5 || willingness <= 5)) {
-    return "Explorer"
-  }
-
-  //All details and additional, series 2-5
-  if (
-    (experience === 2 && (patience <= 3 || willingness <= 3)) ||
-    (experience === 3 && (patience <= 4 || willingness <= 4))
-  ) {
-    return "Pragmatist"
-  }
-
-  //All details and additional, risk averse and risk moderate, series 4 & 5
-  if (risk <= 2 && experience === 4 && (patience <= 4 || willingness <= 4)) {
-    return "Veteran"
-  }
-
-  //All details and additional, series 4 & 5
-  if (risk === 3 && experience === 4 && (patience <= 4 || willingness <= 4)) {
-    return "Adventurer"
-  }
-
-  //Series 3-5
-  if (experience === 4 && (patience > 4 || willingness > 4)) {
-    return "Enthusiast"
-  }
-
-  //All intro and details and additional, risk averse and risk moderate, all series
-  if (risk === 1 && experience === 1 && (patience > 5 || willingness > 5)) {
-    return "Trailblazer"
-  }
-
-  //All videos
-  if (risk >= 2 && experience <= 2 && (patience > 5 || willingness > 5)) {
-    return "Scholar"
-  }
-
-  return "Scholar"
-}
 
 export const CurrentPath = () => {
   const session = useSession().data as SessionWithJwt | null;
@@ -153,7 +42,6 @@ export const CurrentPath = () => {
   const [ nodeCount, setNodeCount ] = useState<number>(0)
   const [ nodeData, setNodeData ] = useState<{ data: RawTree } | null>(null)
   const [ isLoggingIn, setIsLoggingIn ] = useState<boolean>(false)
-  const [ isMemberButNeverDidQuestionnaire, setIsMemberButNeverDidQuestionnaire ] = useState<boolean>(false)
   const [ userProfile, setUserProfile ] = useState<UserProfile>({
     risk: 0,
     willingness: 0,
@@ -162,6 +50,7 @@ export const CurrentPath = () => {
     archetype: undefined
   })
 
+  // QUERIES AND MUTATIONS
   const [ updateMe ] = useMutation(updateMeMutation, {
     context: {
       headers: {
@@ -172,7 +61,6 @@ export const CurrentPath = () => {
   const { data: { videos: { data: videos = [] } = {} } = {} } = useQuery(videosQuery, { variables: { firstModule: 0, lastModule: 999 } })
   const [loadPathQuestionnaire, { data: { pathQuestionnaire: { data: { attributes: pathQuestionnaire = {} } = {} } = {} } = {} }] = useLazyQuery(pathQuestionnaireQuery);
   const { data: { learningPaths: { data: allLearningPaths = {} } = {} } = {} } = useQuery(allLearningPathsQuery)
-
   const { data: { myData: { progressData = {} } = {} } = {} } = useQuery(myDataQuery, {
     context: {
       headers: {
@@ -183,6 +71,7 @@ export const CurrentPath = () => {
     fetchPolicy: 'network-only'
   })
 
+  // SIDE EFFECTS
   //Once pathQuestionnaire is loaded, build user profile and filter videos
   useEffect(() => {
     if (!!pathQuestionnaire) {
@@ -274,10 +163,7 @@ export const CurrentPath = () => {
 
   // prompt user to sign in if unauthenticated. User can choose not to sign in but let them know they won't be able to save progress
   const learningPathTree = progressData?.customPath || constructedPath
-
   const { attributes: currentModule } = videos?.filter(({ attributes: { lessonModule } }) => lessonModule == progressData?.currentModule?.lessonModule)[0] || {}
-  const examScore = progressData?.completedModules?.filter(({ lessonModule }) => lessonModule == nodeData?.data.name)[0]?.examScore
-  const rank = getScoreRank(examScore)
 
   const nameMapCallback = (nameMap, nodeName) => {
     return nameMap?.filter(({ attributes: { lessonModule } }) => lessonModule?.toString() === nodeName?.toString())[0]?.attributes?.title

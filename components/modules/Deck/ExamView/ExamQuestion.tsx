@@ -17,43 +17,58 @@ interface ExamQuestionProps {
   incrementCorrectAnswers: () => void;
 }
 
+type ExamQuestionTypeNames = "multi_choice" | "fill_in" | "interactive_table" | "interactive_chart";
+
+const getQuestionType = (question: ExamQuestionType): ExamQuestionTypeNames | null => {
+  const { multiChoiceQuestion, fillInQuestion, interactiveTableQuestion, interactiveChartQuestion } = question;
+
+  if (!!multiChoiceQuestion) {
+    return 'multi_choice';
+  }
+
+  if (!!fillInQuestion) {
+    return 'fill_in';
+  }
+
+  if (!!interactiveTableQuestion) {
+    return 'interactive_table';
+  }
+
+  if (!!interactiveChartQuestion) {
+    return 'interactive_chart';
+  }
+
+  return null;
+}
+
+// base compare answer
+const compareAnswer = (answer: any, value: any): boolean => {
+  return typeof answer === 'number'
+    ? answer === parseFloat(value)
+    : typeof answer === 'string'
+      ? answer.toLowerCase?.() === value.toLowerCase?.()
+      : answer === value;
+}
+
+// batch compare answer for multiple correct answers or multiple fill in the blanks
+const compareAnswers = (answers, values, requiresOnlyOne, updateUserInputAnswerSetTo) => {
+  const correctAnswers = answers?.map((answer, i) => compareAnswer(answer, values[i]));
+  updateUserInputAnswerSetTo(correctAnswers)
+  
+  if (requiresOnlyOne) {
+    return correctAnswers?.some(answer => answer === true);
+  }
+
+  return correctAnswers?.every(answer => answer === true);
+}
+
 export const ExamQuestion: React.FC<ExamQuestionProps> = ({ question, invokeNextQuestion, incrementCorrectAnswers }: ExamQuestionProps) => {
   const { multiChoiceQuestion, fillInQuestion, interactiveTableQuestion, interactiveChartQuestion } = question;
-  const questionType = !!multiChoiceQuestion
-    ? 'multi_choice'
-    : !!fillInQuestion
-      ? 'fill_in'
-      : !!interactiveTableQuestion
-        ? 'interactive_table'
-        : !!interactiveChartQuestion
-          ? 'interactive_chart'
-          : null;
+  const questionType = getQuestionType(question)
 
   const [ isCorrect, setIsCorrect ] = useState<boolean>(false);
   const [ userInputAnswerSet, updateUserInputAnswerSetTo ] = useState([]); // for multi choice questions
   const [ isAnswered, setIsAnswered ] = useState<boolean>(false);
-
-  // base compare answer
-  const compareAnswer = (answer: any, value: any): boolean => {
-    return typeof answer === 'number'
-      ? answer === parseFloat(value)
-      : typeof answer === 'string'
-        ? answer.toLowerCase?.() === value.toLowerCase?.()
-        : answer === value;
-  }
-
-  // batch compare answer for multiple correct answers or multiple fill in the blanks
-  const compareAnswers = (answers, values, requiresOnlyOne) => {
-    const correctAnswers = answers?.map((answer, i) => compareAnswer(answer, values[i]));
-    updateUserInputAnswerSetTo(correctAnswers)
-    
-    if (requiresOnlyOne) {
-      return correctAnswers?.some(answer => answer === true);
-    }
-
-    return correctAnswers?.every(answer => answer === true);
-  }
-
 
   const onAnswer = (value) => {
     setIsAnswered(true);
@@ -64,16 +79,16 @@ export const ExamQuestion: React.FC<ExamQuestionProps> = ({ question, invokeNext
     }
 
     if (questionType === 'fill_in') { // value will be the input value
-      isCorrect = compareAnswers(question?.fillInQuestion?.correctAnswers?.map(answer => answer.answer), value, false);
+      isCorrect = compareAnswers(question?.fillInQuestion?.correctAnswers?.map(answer => answer.answer), value, false, updateUserInputAnswerSetTo);
     }
 
     if (questionType === 'interactive_table') {
       const answerType = question?.interactiveTableQuestion?.answerType;
 
       if (answerType === 'one_click') {
-        isCorrect = compareAnswers(question?.interactiveTableQuestion?.correctAnswers?.map(answer => answer.value), [ value ], true);
+        isCorrect = compareAnswers(question?.interactiveTableQuestion?.correctAnswers?.map(answer => answer.value), [ value ], true, updateUserInputAnswerSetTo);
       } else {
-        isCorrect = compareAnswers(question?.interactiveTableQuestion?.correctAnswers?.map(answer => answer.value), value, false);
+        isCorrect = compareAnswers(question?.interactiveTableQuestion?.correctAnswers?.map(answer => answer.value), value, false, updateUserInputAnswerSetTo);
       }
     }
 
@@ -123,8 +138,6 @@ export const ExamQuestion: React.FC<ExamQuestionProps> = ({ question, invokeNext
       )
     }
   }
-
-
 
   return (
     <Box padding="0">
