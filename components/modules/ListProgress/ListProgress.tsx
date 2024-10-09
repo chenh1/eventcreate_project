@@ -6,7 +6,6 @@ import type { RawTree } from "@/graphql/queries/learningPaths";
 import type { BgColor } from "@/components/containers/FixedDrawer/FixedDrawer";
 import React from "react";
 import { Box } from "../../containers/Box/Box";
-import { useParams } from "next/navigation";
 import { buildLinearTree, formatTree } from "../../utils/treeDataUtils";
 import { Heading } from "../../core/Heading/Heading";
 import { LinkNode } from "./LinkNode";

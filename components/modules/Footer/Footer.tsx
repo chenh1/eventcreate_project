@@ -5,7 +5,6 @@ import React from "react"
 import { useQuery, ApolloError } from "@apollo/client";
 import { Section } from "../../containers/Section/Section";
 import { Box } from "../../containers/Box/Box";
-import { Heading } from "../../core/Heading/Heading";
 import { SpanLink } from "../../core/SpanLink/SpanLink";
 import Link from "next/link"
 import { Divider } from "../../core/Divider/Divider";
@@ -13,7 +12,7 @@ import { Paragraph } from "../../core/Paragraph/Paragraph";
 import { footerQuery } from "../../../graphql/queries/footer";
 import { Markdown } from "../../utils/Markdown";
 import { Brand } from "../../art/Brand/Brand";
-//import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import { Loader } from "../Loader/Loader";
 
 interface FooterProps {
   brandContent?: React.ReactNode;
@@ -28,7 +27,7 @@ export const Footer: React.FC<FooterProps> = ({ brandContent, bgColor = 'bg-slat
   }: { data: FooterDataRes | undefined; loading?: boolean; error?: ApolloError; } = useQuery(footerQuery);
   const footerData = data?.footer?.data?.attributes
 
-  return (
+  return loading ? <Loader /> : error ? <p>Error: {error.message}</p> : (
     <div className={`relative ${bgColor} w-screen dark max-w-full`}>
       <Section>
         <Box padding="0" gap="lg" className="gap-12 xl:gap-40">
