@@ -35,23 +35,6 @@ function makeClient() {
     cache: new InMemoryCache(),
     link: ApolloLink.from([ errorLink, httpLink ]),
   });
-
-  // return new NextSSRApolloClient({
-  //   cache: new NextSSRInMemoryCache(),
-  //   link:
-  //     typeof window === "undefined"
-  //       ? ApolloLink.from([
-  //           new SSRMultipartLink({
-  //             stripDefer: true,
-  //           }),
-  //           errorLink,
-  //           httpLink
-  //         ])
-  //       : ApolloLink.from([
-  //         errorLink,
-  //         httpLink
-  //       ]),
-  // });
 }
 
 

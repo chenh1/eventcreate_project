@@ -1,5 +1,4 @@
 import { getClient } from "./apollo/client";
-import { useQuery } from "@apollo/client";
 import { Heading } from "../components/core/Heading/Heading";
 import { Paragraph } from "../components/core/Paragraph/Paragraph";
 import { Button } from "../components/core/Button/Button";
@@ -26,7 +25,6 @@ export async function generateMetadata(
 export default async function Home() {
   const client = getClient();
   const { data, error } = await client.query({ query: homePageQuery });
-  // const { data, error } = useQuery(homePageQuery);
 
   const {
     heroCopy,
@@ -63,7 +61,7 @@ export default async function Home() {
         </Box>
       </Section>
 
-      {/* <Section className="dark relative bg-gradient-to-b from-night-black to-indigo-700 z-10">
+      <Section className="dark relative bg-gradient-to-b from-night-black to-indigo-700 z-10">
         <Box padding="0" className="grid-cols-3 justify-between">
           <Box padding="0" gap="md" className="place-content-between z-10">
             <Heading type="text-md md:text-4xl">{step1}</Heading>
@@ -87,7 +85,7 @@ export default async function Home() {
       <Section fullBleed heightClass="pt-0 pb-24" className="bg-gradient-to-b from-indigo-700 to-night-black relative">
         <FlowerBloomGround/>
         <Box gap="sm" padding="0" className="md:absolute md:right-[10%] 2xl:right-[20%] top-8 md:p-4">
-          <FadeIn from="fromRight">
+          <FadeIn disable={false} from="fromRight">
             <Box gap="sm" padding="0" className="dark md:max-w-[300px] md:p-4">
               <Heading type="h3">{midwayTagline}</Heading>
               <Button label={promo1Cta?.copy} url={promo1Cta?.url} primary size="lg"/>
@@ -116,7 +114,7 @@ export default async function Home() {
             </Box>
           </Box>
         </Box>
-      </Section> */}
+      </Section>
     </UnderMaintenanceCatcher>
   )
 }
