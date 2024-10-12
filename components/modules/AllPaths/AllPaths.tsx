@@ -1,5 +1,6 @@
 'use client'
 
+import type { Video, VideoType } from "@/graphql/queries/videos";
 import type { ProgressData } from "@/graphql/queries/myData";
 import React, { useState, FC } from "react";
 import { useQuery } from "@apollo/client";
@@ -18,19 +19,8 @@ import { Paragraph } from "../../core/Paragraph/Paragraph";
 import { Badge } from "../Deck/ExamView/Badge";
 import getScoreRank from "../../utils/getScoreRank";
 import { allLearningPathsQuery } from "../../../graphql/queries/learningPaths";
-import { QueryResult } from "@apollo/client";
 
 const nodeColors = [hyperRed, forceYellow, ultraPurple, cyberTeal, apexBlue];
-
-interface VideoAttributes {
-  lessonModule: string;
-  title: string;
-  description: string;
-}
-
-interface Video {
-  attributes: VideoAttributes;
-}
 
 interface LearningPathAttributes {
   rawTree: any;
@@ -87,7 +77,7 @@ export const AllPaths: FC = () => {
     <>
       {allLearningPaths.map(({ attributes: { rawTree, title, description, level } }, i) => {
         const targetNodeData = nodeData[i];
-        const previewModule: VideoAttributes | undefined = videos.find(({ attributes: { lessonModule } }) => lessonModule === targetNodeData?.data.name)?.attributes!;
+        const previewModule: VideoType | undefined = videos.find(({ attributes: { lessonModule } }) => lessonModule === targetNodeData?.data.name)?.attributes!;
         const examScore = progressData?.completedModules?.find(({ lessonModule }) => lessonModule === targetNodeData?.data.name)?.examScore;
         const tree = JSON.parse(JSON.stringify(rawTree));
         const nodeCount = tree?.nodeCount;

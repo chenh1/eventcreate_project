@@ -39,7 +39,7 @@ export const ConsentBanner: FC = () => {
   }, [pathName, cookies[CONSENT_COOKIE_NAME], isRestrictedPage]);
 
   const hideBanner: boolean = !isReadyToShowBanner || !!cookies[CONSENT_COOKIE_NAME];
-  console.log("isReadyToShowBanner ", isReadyToShowBanner, " ", cookies)
+
   return hideBanner ? null : (
     <>
       {isRestrictedPage && <div className="fixed top-0 w-screen h-screen z-50 bg-night-black opacity-25"></div>}

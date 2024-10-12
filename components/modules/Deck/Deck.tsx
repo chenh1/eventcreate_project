@@ -32,6 +32,51 @@ interface DeckProps {
   orderedPathArray: string[];
 }
 
+const traverseCheckIfModulesAllCleared = (tree, myData) => {
+  let count = 0;
+  let totalModules = 0;
+  const completedModulesByName = myData?.progressData?.completedModules?.map(({ lessonModule }) => lessonModule.toString())
+
+  const traverse = (node) => {
+    if (node.children) {
+      node.children.forEach(child => {
+        traverse(child);
+      });
+    }
+
+    if (completedModulesByName?.includes(node.name)) {
+      count++;
+    }
+
+    totalModules++;
+  }
+
+  traverse(tree);
+
+  // subtract 1 because the last module is the current one
+  return count >= totalModules - 1;
+}
+
+const traverseCustomPathTree = (tree, lessonModule): string => {
+  const currentModule = tree?.children?.find((child) => child?.name === lessonModule.toString())
+
+  if (currentModule) {
+    if (currentModule?.children?.length > 0) {
+      const moduleCode = currentModule?.children[0]?.name
+      return moduleCode?.replace('.', '-')
+    } else {
+      return "";
+    }
+  }
+
+  return tree?.children?.reduce((acc, child) => {
+    if (acc) {
+      return acc
+    }
+
+    return traverseCustomPathTree(child, lessonModule)
+  }, null)
+}
 
 // lessonModuleId is the url module id, lessonModule is the actual Float value for matching
 export const Deck: React.FC<DeckProps> = ({ video, questions, lessonModuleId, lessonModule, orderedPathArray }: DeckProps) => {
@@ -42,14 +87,8 @@ export const Deck: React.FC<DeckProps> = ({ video, questions, lessonModuleId, le
   const [ showLoginWarning, setShowLoginWarning ] = useState<boolean>(false)
   const session = useSession().data as SessionWithJwt | null;
 
-  const incrementCorrectAnswers = () => {
-    setNumberOfCorrectAnswers(numberOfCorrectAnswers + 1)
-  }
-
-  const invokeNextQuestion = () => {
-    setCurrentQuestion(currentQuestion + 1)
-  }
-
+  const incrementCorrectAnswers = () => setNumberOfCorrectAnswers(numberOfCorrectAnswers + 1)
+  const invokeNextQuestion = () => setCurrentQuestion(currentQuestion + 1)
   const resetExam = () => {
     setCurrentQuestion(0)
     setNumberOfCorrectAnswers(0)
@@ -65,6 +104,15 @@ export const Deck: React.FC<DeckProps> = ({ video, questions, lessonModuleId, le
       }
     }
   });
+
+  const { data: { myData } = [] } = useQuery(myDataQuery, { 
+    context: { 
+      headers: { 
+        'Authorization': `Bearer ${session?.data?.jwt}` 
+      },
+    } ,
+    skip: session?.status !== 'authenticated'
+  })
 
   useEffect(() => {
     if (session?.status === 'authenticated') {
@@ -83,60 +131,6 @@ export const Deck: React.FC<DeckProps> = ({ video, questions, lessonModuleId, le
     }
   }, [ session ])
 
-  const { data: { myData } = [] } = useQuery(myDataQuery, { 
-    context: { 
-      headers: { 
-        'Authorization': `Bearer ${session?.data?.jwt}` 
-      },
-    } ,
-    skip: session?.status !== 'authenticated'
-  })
-
-  const traverseCheckIfModulesAllCleared = (tree) => {
-    let count = 0;
-    let totalModules = 0;
-    const completedModulesByName = myData?.progressData?.completedModules?.map(({ lessonModule }) => lessonModule.toString())
-
-    const traverse = (node) => {
-      if (node.children) {
-        node.children.forEach(child => {
-          traverse(child);
-        });
-      }
-
-      if (completedModulesByName?.includes(node.name)) {
-        count++;
-      }
-
-      totalModules++;
-    }
-
-    traverse(tree);
-
-    // subtract 1 because the last module is the current one
-    return count >= totalModules - 1;
-  }
-
-  const traverseCustomPathTree = (tree): string => {
-    const currentModule = tree?.children?.find((child) => child?.name === lessonModule.toString())
-
-    if (currentModule) {
-      if (currentModule?.children?.length > 0) {
-        const moduleCode = currentModule?.children[0]?.name
-        return moduleCode?.replace('.', '-')
-      } else {
-        return "";
-      }
-    }
-
-    return tree?.children?.reduce((acc, child) => {
-      if (acc) {
-        return acc
-      }
-
-      return traverseCustomPathTree(child)
-    }, null)
-  }
 
   const getNextModuleUrl = () => {
     const progressData = myData?.progressData;
@@ -145,8 +139,8 @@ export const Deck: React.FC<DeckProps> = ({ video, questions, lessonModuleId, le
 
     // traverse the tree via children to find the current module
     if (!!customPathTree) {
-      const allModulesCleared = traverseCheckIfModulesAllCleared(customPathTree);
-      const nextCustomModule = traverseCustomPathTree(customPathTree)
+      const allModulesCleared = traverseCheckIfModulesAllCleared(customPathTree, myData);
+      const nextCustomModule = traverseCustomPathTree(customPathTree, lessonModule)
 
       if (!nextCustomModule && allModulesCleared) {
         return '/dashboard?customPathCompleted=true'
@@ -176,28 +170,8 @@ export const Deck: React.FC<DeckProps> = ({ video, questions, lessonModuleId, le
 
   const getFirstIncompletedModuleInTree = () => {
     const tree = myData?.progressData?.customPath || {};
-  
-
-    // const traverse = (node) => {
-    //   if (node.children) {
-    //     node.children.forEach(child => {
-    //       traverse(child);
-    //     });
-    //   }
-
-    //   const completedModules = myData?.progressData?.completedModules || [];
-
-    //   if (completedModules.filter(({ lessonModule: lm }) => lm == node.name)?.length === 0 && !nodeName) {
-    //     nodeName = node.name
-    //   }
-    // }
-    
-    // traverse(tree?.children[0]);
-
-    let nodeName = traverseCustomPathTree(tree)
+    let nodeName = traverseCustomPathTree(tree, lessonModule)
     return nodeName?.replace('-', '.')
-
-    //return nodeName
   }
 
   const completedModulesByName = myData?.progressData?.completedModules?.map(({ lessonModule }) => lessonModule)

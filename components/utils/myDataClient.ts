@@ -2,10 +2,9 @@ import type { SessionWithJwt } from "../constants/types";
 
 
 interface MyDataResponse {
-  // id: number;
-  // name: string;
-  // email: string;
-  // Adjust the fields based on your actual response structure
+  id: number;
+  name: string;
+  email: string;
 }
 
 

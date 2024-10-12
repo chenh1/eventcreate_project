@@ -1,7 +1,7 @@
 import type { CoreColors } from '../../constants/colors'
 import React, { useMemo, ReactNode } from 'react';
 
-type HeaderType = 'h1' | 'h2' | 'h3' | 'h4' | `sm:text-${string}` | `md:text-${string}`
+type HeaderType = 'h1' | 'h2' | 'h3' | 'h4' | `sm:text-${string}` | `md:text-${string}` | `text-md ${string}`
 type FontSizeClass = string
 export type HeadingType = { 
   type: HeaderType, 

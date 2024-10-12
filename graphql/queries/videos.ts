@@ -17,6 +17,10 @@ export type VideoType = {
   }
 }
 
+export type Video = {
+  attributes: VideoType;
+}
+
 export type VideoTypeResponse = {
   videos: {
     data: {

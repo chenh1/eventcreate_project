@@ -21,6 +21,7 @@ import { headerQuery } from "../../../graphql/queries/header";
 import { useQuery, ApolloError } from "@apollo/client";
 import { useFlippers } from "../../utils/useFlippers";
 import { Brand } from "../../art/Brand/Brand";
+import { Loader } from "../Loader/Loader";
 
 const pathsWithLightBg: string[] = [
   '/reset-password',
@@ -56,7 +57,7 @@ export const Header: React.FC<HeaderProps> = ({ headerContent, isTransparent, bg
   const navLinks = data?.header?.data?.attributes?.navLinks
   const { maintenanceMode } = useFlippers({ key: 'maintenanceMode' });
 
-  return (
+  return loading ? <Loader /> : error ? <p>Error: {error.message}</p> : (
     <>
       <FixedDrawer 
         hasScroll 
