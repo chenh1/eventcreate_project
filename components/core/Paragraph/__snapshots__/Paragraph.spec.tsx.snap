@@ -3,7 +3,7 @@
 exports[`renders a paragraph tag with default size styling if size is not indicated 1`] = `
 <DocumentFragment>
   <p
-    class=" text-night-black dark:text-max-white font-body font-body text-base undefined"
+    class=" text-max-white font-body font-body text-base undefined"
   >
     Some words go here
   </p>
@@ -13,7 +13,7 @@ exports[`renders a paragraph tag with default size styling if size is not indica
 exports[`renders a paragraph tag with medium size styling 1`] = `
 <DocumentFragment>
   <p
-    class=" text-night-black dark:text-max-white font-body font-body text-base undefined"
+    class=" text-max-white font-body font-body text-base undefined"
   >
     Some words go here
   </p>

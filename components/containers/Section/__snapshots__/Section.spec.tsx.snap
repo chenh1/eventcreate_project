@@ -3,8 +3,7 @@
 exports[`renders an overlay wrapper 1`] = `
 <DocumentFragment>
   <div
-    class=" flex border-box justify-around w-full py-24 "
-    data-gtm-id="gtm-tag"
+    class="flex border-box justify-around w-full py-24 "
   >
     <div
       class="w-full max-w-7xl px-4 xl:px-0"

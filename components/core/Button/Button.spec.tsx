@@ -14,17 +14,3 @@ it('renders a button', async () => {
   expect(asFragment()).toMatchSnapshot();
 });
 
-
-it('animates button on hover and reverts back after leave', async () => {
-  const { getByTestId, asFragment } = render(
-    <Button label="Click Me"/>
-  );
-
-  fireEvent.mouseEnter(getByTestId("button"))
-
-  expect(asFragment()).toMatchSnapshot();
-
-  fireEvent.mouseLeave(getByTestId("button"))
-
-  expect(asFragment()).toMatchSnapshot();
-});

@@ -14,8 +14,10 @@ const getPaddingClass = (padding: IncrementKeys): PaddingValues => {
       return 'p-12';
     case 'xl':
       return 'p-16';
+    case "0":
+      return 'p-0';
     default:
-      return 'p-2';
+      return 'p-0';
   }
 };
 

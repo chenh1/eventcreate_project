@@ -30,7 +30,7 @@ export type ParagraphType = {
   className?: string
 }
 
-export const Paragraph: React.FC<ParagraphType> = ({ size, isInlineBlock, children, textColor, darkTextColor, className }) => {
+export const Paragraph: React.FC<ParagraphType> = ({ size, isInlineBlock, children, textColor, darkTextColor = "max-white", className }) => {
   const computedClasses = useMemo(() => {
     return getSizeClasses(size);
   }, [size]);
@@ -38,17 +38,13 @@ export const Paragraph: React.FC<ParagraphType> = ({ size, isInlineBlock, childr
   const colorClass = useMemo(() => {
     if (textColor) {
       return `text-${textColor}`
+    } else if (darkTextColor) {
+      return `text-${darkTextColor}`
     }
   }, [textColor])
 
-  const darkColorClass = useMemo(() => {
-    if (darkTextColor) {
-      return `dark:text-${darkTextColor}`
-    }
-  }, [darkTextColor])
-
   return (
-    <p className={`${isInlineBlock ? 'inline-block' : ''} ${colorClass || 'text-night-black'} ${darkColorClass || 'dark:text-max-white'} font-body ${BASE_PARAGRAPH_CLASSES} ${computedClasses} ${className}`}>
+    <p className={`${isInlineBlock ? 'inline-block' : ''} ${colorClass || 'text-night-black'} font-body ${BASE_PARAGRAPH_CLASSES} ${computedClasses} ${className}`}>
       {children}
     </p>
   )

@@ -33,6 +33,7 @@ export type GapValues =
   "gap-32"
 
 export type PaddingValues =
+  "p-0" |
   "p-1" |
   "p-2" |
   "p-4" |

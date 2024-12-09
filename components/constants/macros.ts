@@ -1,1 +1,0 @@
-export const BLANK: string = '___blank___'

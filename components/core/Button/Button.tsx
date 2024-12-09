@@ -3,10 +3,8 @@
 import type { CoreColors } from '../../constants/colors'
 import type { IncrementKeys } from '@/components/constants/types';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { CLICK_CLASS, SECTION_VIEW_CLASS } from '../../constants/tagging';
-import './button.css'
 
 const getSizeClasses = (size: IncrementKeys): string => {
   switch (size) {
@@ -44,12 +42,23 @@ const getModeClasses = (isPrimary: boolean): string =>
 const BASE_BUTTON_CLASSES: string =
   'w-full sm:w-auto cursor-pointer border-2 font-bold leading-none inline-block rounded-lg text-center';
 
-export type ButtonType = { type?: string; disabled?: boolean; primary?: boolean, color?: CoreColors, size?: IncrementKeys, label: string, url?: string, textAlign?: string, onClick?: (any) => void, dataGtmId?: `gtm-${string}`, gtmClick?: `gtm-${string}`, gtmSectionView?: `gtm-${string}` }
+export type ButtonType = { 
+  value?: string; 
+  type?: string; 
+  disabled?: boolean; 
+  primary?: boolean, 
+  color?: CoreColors, 
+  size?: IncrementKeys, 
+  label: string, 
+  url?: string, 
+  textAlign?: string, 
+  onClick?: (any) => void
+}
 /**
  * Primary UI component for user interaction
  */
 export const Button: React.FC<ButtonType> = (
-  { primary = false, color = "hyper-red", size = 'md', label, url, textAlign, onClick, dataGtmId, gtmClick, gtmSectionView, ...props }
+  { primary = false, color = "hyper-red", size = 'md', label, url, textAlign, onClick, ...props }
 ) => {
   const [ isHover, setIsHover ] = useState(false);
   const computedClasses = useMemo(() => {
@@ -64,35 +73,23 @@ export const Button: React.FC<ButtonType> = (
   }, [color])
 
   const ClickElement = !!url ?
-    props => <Link data-testid="buttonLink" {...props}/> :
-    props => <button data-testid="button" {...props}/>;
+    props => <Link {...props}/> :
+    props => <button {...props}/>;
 
   return (
     <ClickElement 
       href={url}
-      data-gtm-id={dataGtmId}
       type="button" 
       onMouseOver={() => !isHover && setIsHover(true)} 
       onMouseOut={() => setIsHover(false)} 
       onMouseLeave={() => setIsHover(false)} 
-      className={`${gtmClick ? CLICK_CLASS : ''} ${!primary ? 'secondary' : ''} ${gtmSectionView ? SECTION_VIEW_CLASS : ''} ${BASE_BUTTON_CLASSES} ${computedClasses} ${computedColorClasses}`} 
+      className={`${!primary ? 'secondary' : ''} ${BASE_BUTTON_CLASSES} ${computedClasses} ${computedColorClasses}`} 
       onClick={(e) => {
         onClick && onClick(e)
-        //setIsHover(false);
       }}
       {...props}
     > 
-      {primary && <div className={`${computedColorClasses} rounded-lg absolute left-0 top-0 w-full h-full ${isHover ? 'animate-plump' : ''}`}></div>}
-      {!primary &&
-        <>
-          <div className="triangle left">
-            <div></div>
-          </div>
-          <div className="triangle right">
-            <div></div>
-          </div>
-        </>
-      }
+      {primary && <div className={`${computedColorClasses} rounded-lg absolute left-0 top-0 w-full h-full`}></div>}
       <span className="pointer-events-none relative z-10">
         {label}
       </span>

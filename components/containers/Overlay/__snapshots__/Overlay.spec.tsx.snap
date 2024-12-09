@@ -10,7 +10,7 @@ exports[`closes the overlay if bg is clicked 1`] = `
       class="relative popup freeze "
     >
       <div
-        class=" grid rounded-md gap-4 shadow-lg p-8 bg-max-white dark:bg-night-black "
+        class="grid rounded-md gap-4 shadow-lg p-0 bg-max-white dark:bg-night-black "
       >
         <p>
           Some paragraph
@@ -31,7 +31,7 @@ exports[`renders an overlay wrapper 1`] = `
       class="relative popup freeze "
     >
       <div
-        class=" grid rounded-md gap-4 shadow-lg p-8 bg-max-white dark:bg-night-black "
+        class="grid rounded-md gap-4 shadow-lg p-0 bg-max-white dark:bg-night-black "
       >
         <p>
           Some paragraph

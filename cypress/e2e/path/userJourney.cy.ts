@@ -1,121 +1,109 @@
 /// <reference types="cypress" />
 
-import { 
-  host,
-  mockAcc1,
-  mockAcc1Pw,
-  mockAcc2,
-  mockAcc2Pw,
-  mockAcc3,
-  mockAcc3Pw,
-  dashboard,
-  path
-} from "../constants"
+
 
 describe('user journey from homepage', () => {
   beforeEach(() => {
-    cy.visit(host)
+    cy.visit("http://localhost:3000")
   })
 
-  it('first time user visiting homepage', () => {
-    cy.get('[data-cy="hero-cta"]').should('have.length', 1)
-    cy.get('[data-cy="hero-cta"]').click()
-    cy.wait(1000)
 
-    // Should be redirected to path page
-    cy.location().should((location) => {
-      expect(location.pathname).to.eq(path)
-    })
+  it('Should add an entry to the table once fields are added with additionalFields empty', () => {
+    cy.get('[data-cy="name"]').type("John Doe")
+    cy.get('[data-cy="email"]').type("johndoe@gmail.com")
+    cy.get('[data-cy="age"]').type("23")
+    cy.get('[data-cy="add_entry"]').click()
+    cy.get('[data-cy="delete_entry_0"]').should('have.length', 1)
+    cy.get('[data-cy="see_fields_0"]').should('have.length', 0)
+  })
+
+  it('Delete an entry removes it from the table', () => {
+    cy.get('[data-cy="name"]').type("John Doe")
+    cy.get('[data-cy="email"]').type("johndoe@gmail.com")
+    cy.get('[data-cy="age"]').type("23")
+    cy.get('[data-cy="add_entry"]').click()
+
+    cy.get('[data-cy="name"]').type("Jane Doe")
+    cy.get('[data-cy="email"]').type("janedoe@gmail.com")
+    cy.get('[data-cy="age"]').type("25")
+    cy.get('[data-cy="add_entry"]').click()
+
+    cy.get('[data-cy="name"]').type("Professor X")
+    cy.get('[data-cy="email"]').type("xavier@xmen.com")
+    cy.get('[data-cy="age"]').type("70")
+    cy.get('[data-cy="add_entry"]').click()
+
     
-    cy.get('[data-cy="path-questionnaire-answer-0"]').click()
-    cy.wait(300)
-    cy.get('[data-cy="path-questionnaire-answer-2"]').click()
-    cy.wait(300)
-    cy.get('[data-cy="path-questionnaire-answer-1"]').click()
-    cy.wait(300)
-    cy.get('[data-cy="path-questionnaire-answer-0"]').click()
+    cy.get('[data-cy="edit_name_John Doe"]').should('have.length', 1)
+    cy.get('[data-cy="delete_entry_0"]').should('have.length', 1)
+    cy.get('[data-cy="delete_entry_0"]').click()
 
-    cy.wait(1000)
-    // Should see path generated from questionnaire
-    cy.location().should((location) => {
-      expect(location.search).to.include('q1=a&q2=c&q3=b&q4=a')
-    })
-    cy.get('[data-cy="current-path-root-text"]').should('have.text', "Your steps to success")
-    cy.get('[data-cy="log-in-prompt-learning-path"]').should('have.length', 1)
-
-    cy.get('[data-cy="current-path-node-1"]').click()
-
-    cy.wait(1000)
-    // Login warning on video if not logged in
-    cy.get('[data-cy="video-login-warning"]').should('have.length', 1)
+    cy.get('[data-cy="edit_name_John Doe"]').should('have.length', 0)
   })
 
-  it('logged in user visiting dashboard with no path data', () => {
-    cy.get('[data-cy="header-login-link"]').should('have.length', 1)
-    cy.get('[data-cy="header-login-link"]').click()
+  it('Error message shows for negative age', () => {
+    cy.get('[data-cy="name"]').type("John Doe")
+    cy.get('[data-cy="email"]').type("johndoe@gmail.com")
+    cy.get('[data-cy="age"]').type("-23")
+    cy.get('[data-cy="add_entry"]').click()
+
     cy.wait(200)
 
-    cy.get('[data-cy="login-email-field"]').type(mockAcc1)
-    cy.get('[data-cy="login-password-field"]').type(mockAcc1Pw)
-    cy.get('[data-cy="login-register-cta"]').click()
-
-    cy.wait(100)
-    cy.get('[data-cy="nav-link-dashboard"]').click()    
-
-    cy.wait(1000)
-    cy.location().should((location) => {
-      expect(location.pathname).to.eq(dashboard)
-    })
-
-    cy.get('[data-cy="tailor-lesson-button"]').should('have.length', 1)
-    cy.get('[data-cy="start-from-top-button"]').should('have.length', 1)
+    cy.get('[data-cy="error_message"]').should('have.length', 1)
+    
   })
 
-  it('logged in user visiting dashboard with all path set', () => {
-    cy.get('[data-cy="header-login-link"]').should('have.length', 1)
-    cy.get('[data-cy="header-login-link"]').click()
-    cy.wait(200)
+  it('Entries can be edited and will show error for 3 seconds if not valid', () => {
+    cy.get('[data-cy="name"]').type("John Doe")
+    cy.get('[data-cy="email"]').type("johndoe@gmail.com")
+    cy.get('[data-cy="age"]').type("23")
+    cy.get('[data-cy="add_entry"]').click()
 
-    cy.get('[data-cy="login-email-field"]').type(mockAcc2)
-    cy.get('[data-cy="login-password-field"]').type(mockAcc2Pw)
-    cy.get('[data-cy="login-register-cta"]').click()
 
-    cy.wait(100)
-    cy.get('[data-cy="nav-link-dashboard"]').click()    
+    cy.get('[data-cy="edit_email_johndoe@gmail.com"]').click()
+    cy.get('[data-cy="input_email_johndoe@gmail.com"]').focus().clear()
+    cy.get('[data-cy="input_email_johndoe@gmail.com"]').type("johndoe20@gmail.com")
+    cy.get('[data-cy="input_email_johndoe@gmail.com"]').type("{enter}")
 
-    cy.wait(1000)
-    cy.location().should((location) => {
-      expect(location.pathname).to.eq(dashboard)
-    })
-    
-    cy.get('[data-cy="tailor-lesson-button"]').should('have.length', 0)
-    cy.get('[data-cy="start-from-top-button"]').should('have.length', 0)
-    cy.get('[data-cy="current-path-root-text"]').should('have.length', 0)
-    cy.get('[data-cy="pick-up-left-off-text"]').should('have.length', 1)
-    cy.get('[data-cy="pick-up-left-off-text"]').should('have.text', "Pick up where you left off")
+    cy.get('[data-cy="edit_email_johndoe20@gmail.com"]').should('have.length', 1)
+
+    cy.get('[data-cy="edit_age_23"]').click()
+    cy.get('[data-cy="input_age_23"]').focus().clear()
+    cy.get('[data-cy="input_age_23"]').type("-23")
+    cy.get('[data-cy="input_age_23"]').type("{enter}")
+    cy.get('[data-cy="error_age_23"]').should('have.length', 1)
+
+    cy.wait(4000)
+    cy.get('[data-cy="error_age_23"]').should('have.length', 0)
   })
 
-  it('logged in user visiting dashboard with custom path set and never visited a module', () => {
-    cy.get('[data-cy="header-login-link"]').should('have.length', 1)
-    cy.get('[data-cy="header-login-link"]').click()
-    cy.wait(200)
+  it('Additional fields can be added to the initial form or removed and will appear under additionalFields as editable entries', () => {
+    cy.get('[data-cy="name"]').type("John Doe")
+    cy.get('[data-cy="email"]').type("johndoe@gmail.com")
+    cy.get('[data-cy="age"]').type("23")
+    cy.get('[data-cy="input_add_field"]').type("Favorite Food")
+    cy.get('[data-cy="add_field"]').click()
+    cy.get('[data-cy="input_add_field"]').type("Favorite Movie")
+    cy.get('[data-cy="add_field"]').click()
 
-    cy.get('[data-cy="login-email-field"]').type(mockAcc3)
-    cy.get('[data-cy="login-password-field"]').type(mockAcc3Pw)
-    cy.get('[data-cy="login-register-cta"]').click()
-
-    cy.wait(100)
-    cy.get('[data-cy="nav-link-dashboard"]').click()    
-
-    cy.wait(1000)
-    cy.location().should((location) => {
-      expect(location.pathname).to.eq(dashboard)
-    })
     
-    cy.get('[data-cy="tailor-lesson-button"]').should('have.length', 0)
-    cy.get('[data-cy="start-from-top-button"]').should('have.length', 0)
-    cy.get('[data-cy="current-path-root-text"]').should('have.length', 1)
-    cy.get('[data-cy="pick-up-left-off-text"]').should('have.length', 1)
-    cy.get('[data-cy="pick-up-left-off-text"]').should('have.text', "Start your learning journey")
+
+    cy.get('[data-cy="input_Favorite Food"]').should('have.length', 1)
+    cy.get('[data-cy="input_Favorite Movie"]').should('have.length', 1)
+
+    cy.get('[data-cy="input_Favorite Food"]').type("Pizza")
+    cy.get('[data-cy="input_Favorite Movie"]').type("The Matrix")
+    
+    cy.get('[data-cy="add_entry"]').click()
+
+    //edit entry
+    cy.get('[data-cy="see_fields_0"]').click()
+    cy.get('[data-cy="edit_Favorite Food_Pizza"]').should('have.length', 1)
+    cy.get('[data-cy="edit_Favorite Food_Pizza"]').click()
+    cy.get('[data-cy="input_Favorite Food_Pizza"]').focus().clear()
+    cy.get('[data-cy="input_Favorite Food_Pizza"]').type("Pasta")
+    cy.get('[data-cy="input_Favorite Food_Pizza"]').type("{enter}")
+    cy.get('[data-cy="edit_Favorite Food_Pizza"]').should('have.length', 0)
+    cy.get('[data-cy="edit_Favorite Food_Pasta"]').should('have.length', 1)
   })
 })
