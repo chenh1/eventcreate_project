@@ -34,7 +34,8 @@ const Module = () => {
   const [ entries, setEntries ] = useState<Entry[]>([]);
   const [ additionalFields, setAdditionalFields ] = useState<string[]>([]);
   const { handleSubmit, register, reset, setValue, unregister, formState: { errors } } = useForm({
-    resolver: zodResolver(schema)
+    resolver: zodResolver(schema),
+    reValidateMode: "onSubmit"
   });
 
   const removeField = useCallback((e) => {
@@ -61,10 +62,8 @@ const Module = () => {
     if (Object.keys(errors).length > 0) {
       setShowErrors(true)
     }
-  }, [errors?.age, errors?.email, errors?.name])
-
-
-  console.log("formState ", errors, entries)
+  }, [errors?.name, errors?.email, errors?.age])
+  
   return (
     <Box gap="lg">
       <Box gap="md" className="grid-cols-1 md:grid-cols-3">
@@ -86,14 +85,12 @@ const Module = () => {
 
           <form onSubmit={
             handleSubmit((data) => {
-              const { name, email, age, ...additionalFields } = data
-              // const entry = { id: uuidv4(), name, email, age, additionalFields: {...additionalFields || {}} }
               const entry = { id: uuidv4(), ...data }
               setEntries((prev) => [...prev, entry as Entry])
               reset()
               setAdditionalFields([])
-            })
-          }>
+            }
+          )}>
             <Box gap="md" padding="0">
               <InputField data-cy={"name"} placeholder="Name"  {...register("name", { required: true })} />
               <InputField data-cy={"email"} placeholder="Email" type="email"  {...register("email", { required: true })} />

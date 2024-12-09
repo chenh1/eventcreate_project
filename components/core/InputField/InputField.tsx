@@ -61,11 +61,9 @@ const InputField = React.forwardRef<HTMLInputElement, InputFieldProps>(({
         disabled={disabled}
         onChange={(e) => setInputVal(e.target.value)} 
         onFocus={() => {
-          console.log("FOCIUSED")
           setIsFocused(true)} 
         }
         onBlur={(e) => {
-          console.log("BLURRING")
           onBlur && onBlur(e)
           setIsFocused(false)} 
         }

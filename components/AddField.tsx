@@ -34,7 +34,7 @@ const AddField = memo(({ additionalFields, setAdditionalFields }: AddFieldProps)
     <form onSubmit={
       handleSubmit((data) => {
         const { fieldName } = data
-        console.log(data)
+
         if (additionalFields.includes(fieldName)) {
           setError(true)
         } else {
