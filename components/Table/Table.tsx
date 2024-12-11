@@ -4,7 +4,7 @@ import { Divider } from "../core/Divider/Divider";
 import AdditionalFields from "./AdditionalFields";
 import { useCallback, useMemo } from "react";
 import EntryField from "./EntryField";
-import { requiredFields } from "../constants";
+import { requiredFields, genericFieldLabels } from "../constants";
 import { Button } from "../core/Button/Button";
 
 const Table = ({ entries, setEntries }) => {
@@ -24,7 +24,7 @@ const Table = ({ entries, setEntries }) => {
         <Box gap="sm" className="min-w-[1280px]">
           <Box gap="sm" className={`grid-cols-${cols}`}>
             {headers?.map((header, index) => (
-              <Paragraph key={index} size="sm">{header}</Paragraph>
+              <Paragraph key={index} size="sm">{genericFieldLabels[header]}</Paragraph>
             ))}
           </Box>
           <Divider />

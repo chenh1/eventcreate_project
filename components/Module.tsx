@@ -92,9 +92,9 @@ const Module = () => {
             }
           )}>
             <Box gap="md" padding="0">
-              <InputField data-cy={"name"} placeholder="Name"  {...register("name", { required: true })} />
-              <InputField data-cy={"email"} placeholder="Email" type="email"  {...register("email", { required: true })} />
-              <InputField data-cy={"age"} placeholder="Age" type="number"  {...register("age", { required: true, valueAsNumber: true })} />
+              <InputField fullWidth data-cy={"name"} placeholder="Name"  {...register("name", { required: true })} />
+              <InputField fullWidth data-cy={"email"} placeholder="Email" type="email"  {...register("email", { required: true })} />
+              <InputField fullWidth data-cy={"age"} placeholder="Age" type="number"  {...register("age", { required: true, valueAsNumber: true })} />
               {additionalFields.map((field, index) => (
                 <Box key={index} gap="xs" padding="0" className="grid-cols-[5fr,1fr] items-baseline">
                   <InputField data-cy={`input_${field}`} data-testid={field} placeholder={field} {...register(field)} />
