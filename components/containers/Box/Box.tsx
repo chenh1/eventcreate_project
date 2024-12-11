@@ -13,6 +13,7 @@ export type BoxProps = {
   onClick?: (any) => void;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
+  ref?: React.Ref<HTMLDivElement>;
 }
 
 const getRoundedBorder = (isRounded?: boolean): string =>
@@ -21,7 +22,7 @@ const getRoundedBorder = (isRounded?: boolean): string =>
 const getBoxShadowClass = (hasShadow?: boolean): string =>
   hasShadow ? 'shadow-lg' : '';
 
-export const Box: React.FC<BoxProps> = ({
+export const Box = React.forwardRef<HTMLDivElement, BoxProps>(({
   className = '',
   gap = 'sm',
   padding = "0",
@@ -29,7 +30,7 @@ export const Box: React.FC<BoxProps> = ({
   hasShadow,
   children,
   ...props
-}) => {
+}, ref) => {
   const computedGapClass = useMemo(() => {
     const gapSizeClasses = getGapSizeClasses(gap);
     const roundedBorderClass = getRoundedBorder(isRounded);
@@ -40,10 +41,11 @@ export const Box: React.FC<BoxProps> = ({
 
   return (
     <div
+      ref={ref}
       className={`grid ${computedGapClass} ${className}`}
       {...props}
     >
       {children}
     </div>
   );
-};
+});

@@ -3,7 +3,6 @@ import { Paragraph } from "../core/Paragraph/Paragraph";
 import { Divider } from "../core/Divider/Divider";
 import AdditionalFields from "./AdditionalFields";
 import { useCallback, useMemo } from "react";
-import InputField from "../core/InputField/InputField";
 import EntryField from "./EntryField";
 import { requiredFields } from "../constants";
 import { Button } from "../core/Button/Button";
