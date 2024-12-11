@@ -12,7 +12,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="flex flex-col items-center overflow-x-hidden">
+        <main className="flex flex-col items-center overflow-x-hidden dark bg-night-black ">
           {children}
         </main>
       </body>

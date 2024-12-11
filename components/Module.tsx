@@ -66,7 +66,7 @@ const Module = () => {
   
   return (
     <Box gap="lg">
-      <Box gap="md" className="grid-cols-1 md:grid-cols-3">
+      <Box gap="md" className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         <Box gap="md">
           <Heading type="h1">Enter Fields</Heading>
 
