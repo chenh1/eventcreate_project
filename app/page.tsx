@@ -6,8 +6,8 @@ import Module from "../components/Module";
 
 export default async function Home() {
   return (
-    <Section heightClass="h-max" className="py-20">
-      <Box padding="0" className="min-h-screen relative items-center">
+    <Section className="py-20 min-h-screen">
+      <Box padding="0" className="relative items-center min-h-full">
         <Module />
       </Box>
     </Section>
